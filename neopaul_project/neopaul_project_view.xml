@@ -1,0 +1,1186 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+   <!--
+       neopaul project Views 
+   -->
+
+    
+    <record model="ir.ui.view" id="view_neopaul_user_form">
+        <field name="name">view.neopaul_user.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="initials"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_project_tree">
+        <field name="name">view.neopaul_project.tree</field>
+        <field name="model">project.project</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Projects">
+                <field name="partner_id"/>
+                <field name="name" string="Project Name"/>
+                <field name="code"/>
+                <field name="user_id"/>
+                <field name="date" string="Placement Date"/>
+                <field name="neopaul_stage"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="view_project_filter" model="ir.ui.view">
+            <field name="name">neopaul.project.search</field>
+            <field name="model">project.project</field>
+	    <field name="inherit_id" ref="project.view_project_project_filter"></field>
+            <field name="arch" type="xml">
+		<field name="name" position="after">
+                    <field name="name" string="Projects" filter_domain="[('name','ilike',self)]"/>
+                    <field name="code" string="Code"/>
+                    <field name="neopaul_stage" string="Staduium"/>
+
+                    <separator/>
+                    <filter icon="terp-document-new" string="Project Created" name="project_created" domain="[('neopaul_stage','=','project_created')]"/>
+                    <filter icon="terp-document-new" string="In Design" name="in_design" domain="[('neopaul_stage','=','in_design')]"/>
+                    <filter icon="terp-document-new" string="Waiting Computation" name="waiting_computation" domain="[('neopaul_stage','=','waiting_computation')]"/>
+                    <filter icon="terp-document-new" string="Waiting Offer" name="waiting_offer" domain="[('neopaul_stage','=','waiting_offer')]"/>
+                    <filter icon="terp-document-new" string="Waiting Order" name="waiting_order" domain="[('neopaul_stage','=','waiting_order')]"/>
+                    <filter icon="terp-document-new" string="In Production" name="in_production" domain="[('neopaul_stage','=','in_production')]"/>
+                    <filter icon="terp-dolar_ok!" string="Done" name="done" domain="[('neopaul_stage','=','done')]"/>
+                    <separator/>
+		</field>
+
+            </field>
+        </record>
+
+    <act_window name="Design Vouchers"
+    src_model="project.project"
+    res_model="neopaul.project.design.voucher"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_project_design_voucher"
+    context="{'project_id':active_id,'default_project_id':active_id}"
+    domain="[('project_id','=',active_id)]"
+    />
+
+    <act_window name="Calculation Vouchers"
+    src_model="project.project"
+    res_model="neopaul.project.calculation.voucher"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_project_calculation_voucher"
+    context="{'project_id':active_id,'default_project_id':active_id}"
+    domain="[('project_id','=',active_id)]"
+    />
+
+    <act_window name="Production Orders"
+    src_model="project.project"
+    res_model="neopaul.production.order"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_project_production_voucher"
+    context="{'project_id':active_id,'default_project_id':active_id}"
+    domain="[('project_id','=',active_id)]"
+    />
+
+    <act_window name="Placement Vouchers"
+    src_model="project.project"
+    res_model="neopaul.placement.voucher"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_project_placement_voucher"
+    context="{'project_id':active_id,'default_project_id':active_id}"
+    domain="[('project_id','=',active_id)]"
+    />
+
+    <act_window name="Offers"
+    src_model="project.project"
+    res_model="sale.order"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_project_sale_order"
+    context="{'project_project_id':active_id,'default_project_project_id':active_id}"
+    domain="[('project_project_id','=',active_id)]"
+    />
+
+    <record model="ir.ui.view" id="view_neopaul_project_form">
+        <field name="name">view.neopaul_project.form</field>
+        <field name="model">project.project</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Project">
+            <group colspan="4" col="5">
+                <field name="name" string="Name"/>
+                <field name="code" attrs="{'invisible':[('neopaul_stage','not in',['in_production','done'])]}"/>
+		<newline/>
+                <field name="short_description"/>
+            </group>
+            <notebook colspan="4">
+                <page string="Project Infos">
+                    <group colspan="2" col="2">
+                        <field name="partner_id"/>
+                        <field name="contact_id"/>
+                        <field name="contact2_id"/>
+                        <field name="delivery_address_id"/>
+                        <field name="invoice_address_id"/>
+                    </group>
+                    <group colspan="2" col="3">
+                        <field name="user_id" colspan="3"/>
+                        <field name="team_id" colspan="3"/>
+                        <field name="neopaul_stage"/>
+                        <newline/>
+                        <field name="production_checked" invisible="0"/>
+                        <button string="Check Production" type="object" name="production_check" attrs="{'invisible':['|',('neopaul_stage','in',['in_production','done']),('production_checked','=',True)]}" context="{'sale_order_id':sale_order_id}"/>
+                        <button string="Start Production" type="object" name="production_start" attrs="{'invisible':['|',('neopaul_stage','in',['in_production','done']),('production_checked','=',False)]}" context="{'sale_order_id':sale_order_id}"/>
+                    </group>
+                    <group colspan="2" col="4">
+                        <field name="create_date" widget="date"/>
+                        <newline/>
+                        <field name="date_preferred"/>
+                        <newline/>
+                        <field name="date" string="Placement Date"/>
+                        <field name="date_deadline_type" nolabel="1"/>
+                        <newline/>
+                        <field name="production_start_date" string="Productiestartdatum"/>
+                    </group>
+                    <group colspan="4">
+                        <field name="description" colspan="4" nolabel="1"/>
+                    </group>
+                </page>
+                <page string="Site Information">
+                      <group colspan="2" col="3">
+                        <separator string="" colspan="3"/>
+                        <field name="planning_permission"/>
+                        <field name="planning_permission_text" nolabel="1"/>
+                        <field name="particular_size"/>
+                        <field name="particular_size_text" nolabel="1"/>
+                        <separator string="Cabling Requirement" colspan="3"/>
+                        <field name="cabling_requirements_1"/>
+                        <field name="cabling_requirements_1_text" nolabel="1"/>
+                        <field name="cabling_requirements_2"/>
+                        <field name="cabling_requirements_2_text" nolabel ="1"/>
+                        <field name="cabling_requirements_3"/>
+                        <field name="cabling_requirements_3_text" nolabel="1"/>
+                        <field name="cabling_requirements_4"/>
+                        <field name="cabling_requirements_4_text" nolabel="1"/>
+                        <separator string="Parking" colspan="3"/>
+                        <field name="parking_1"/>
+                        <field name="parking_1_text" nolabel="1"/>
+                        <field name="parking_2"/>
+                        <field name="parking_2_text" nolabel="1"/>
+                        <separator string="Platform" colspan="3"/>
+                        <field name="platform"/>
+                        <field name="platform_text" nolabel="1"/>
+                        <field name="platform_height"/>
+                      </group>
+                      <group colspan="2" col="3">
+                        <separator string="Surface" colspan="3"/>
+                        <field name="surface_1"/>
+                        <field name="surface_1_text" nolabel="1"/>
+                        <field name="surface_2"/>
+                        <field name="surface_2_text" nolabel="1"/>
+                        <field name="surface_4"/>
+                        <newline/>
+                        <field name="surface_5"/>
+                        <separator string="Existing Sign" colspan="3"/>
+                        <field name="existing_commercials_1"/>
+                        <field name="existing_commercials_1_text" nolabel="1"/>
+                        <field name="existing_commercials_2"/>
+                        <field name="existing_commercials_2_text" nolabel="1"/>
+                        <field name="existing_commercials_3"/>
+                        <field name="existing_commercials_3_text" nolabel="1"/>
+                        <separator string="Colors" colspan="3"/>
+                        <field name="color_1"/>
+                        <newline/>
+                        <field name="color_2"/>
+                        <separator string="Lighting" colspan="3"/>
+                        <field name="lighting_type"/>
+                      </group>
+                </page>
+                <page string="Design Vouchers">
+                     <separator string="Designs Vouchers" colspan="4"/>
+                     
+                     <field name="design_voucher_ids" colspan="4" nolabel="1" context="{'default_project_id': active_id}">
+                        <form string="Design Vouchers">
+                            <group colspan="4">
+                                <field name="name"/>
+                                <field name="project_id" colspan="2"/>
+                            </group>
+                               <button name="dv_print" type="object" string="Print Ontwerpbon"/>
+                            <group colspan="4">
+                                    <group colspan="2" col="2">
+                                        <field name="customer_id"/>
+                                        <field name="manager_id"/>
+                                        <field name="designer_id"/>
+                                        <field name="contact_address_id"/>
+                                        <field name="contact2_address_id"/>
+                                        <field name="delivery_address_id"/>
+                                        <field name="date_deadline"/>
+                                    </group>
+                                    <group colspan="2" col="2">
+                                        <field name="facade_color"/>
+                                        <field name="facade_type"/>
+                                        <field name="viewing_situation"/>
+                                        <field name="budget"/>
+                                        <field name="atmosphere"/>
+                                        <field name="website"/>
+                                    </group>
+                                    <separator string="Description" colspan="4"/>
+                                    <field name="description" colspan="4" nolabel="1"/>
+                            </group>
+                        </form>
+                     </field>
+                     
+                </page>
+                <page string="Calculation Vouchers">
+                     <separator string="Calculation Vouchers" colspan="4"/>
+                     <!--                     <button string="Generate Calculation Voucher" name="calc_voucher_generate" type="object" colspan="2"/>-->
+                     <field name="calculation_voucher_ids" colspan="4" nolabel="1" context="{'default_project_id': active_id}" readonly="1"/>
+                </page>
+                <page string="Offers">
+                     <separator string="Offers" colspan="4"/>
+                     <field name="offer_ids" colspan="4" nolabel="1" context="{'default_project_id': active_id}" readonly="1"/>
+                </page>
+                <page string="Sales">
+                        <separator string="Order" colspan="4"/>
+                        <field name="sale_order_id" string="Validated Sale Order"/>
+                        <field name="sale_tender_id"/>
+                    <group colspan="4" col="4">
+                        <separator string="Amount" colspan="4"/>
+                        <field name="amount_quoted"/>
+                        <field name="amount_advance"/>
+                        <field name="amount_tam"/>
+                        <field name="amount_unit"/>
+                    </group>
+                    <group>
+                        <separator string="Sale Order Line"/>
+                        <newline/>
+                        <field name="so_line_ids" nolabel="1"/>
+                    </group>
+                </page>
+                <page string="Production orders">
+                     <separator string="Production Orders" colspan="4"/>
+                     <field name="production_order_ids" colspan="4" nolabel="1" context="{'default_project_id': active_id}" readonly="1"/>
+                </page>
+                <page string="Placement Vouchers">
+                     <separator string="Placement Vouchers" colspan="4"/>
+                     <field name="placement_voucher_ids" colspan="4" nolabel="1" context="{'default_project_id': active_id}" readonly="1"/>
+                </page>
+
+            </notebook>
+        </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_neopaul_project">
+        <field name="name">Projects</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.project</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_neopaul_project_tree"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_neopaul_project_tree_view">
+        <field name="sequence">5</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_neopaul_project_tree"/>
+        <field name="act_window_id" ref="action_neopaul_project"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_neopaul_project_form_view">
+        <field name="sequence">10</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_neopaul_project_form"/>
+        <field name="act_window_id" ref="action_neopaul_project"/>
+    </record>
+
+    <menuitem name="Projects" parent="project.menu_project_management" id="menu_neopaul_project" action="action_neopaul_project" sequence="1"/>
+
+    <menuitem id="project.menu_projects" name="Projects" parent="base.menu_definitions"/>
+    <menuitem id="project.menu_action_view_task" name="Tasks" parent="base.menu_definitions"/>
+    
+    
+    <record model="ir.ui.view" id="view_neopaul_company_form">
+        <field name="name">view.neopaul_company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="bank_ids" position="after">
+                <group colspan="4">
+                    <field name="so_legal_notice1" colspan="2"/>
+                </group>
+            </field>
+        </field>
+    </record>
+    
+
+    <record model="ir.ui.view" id="view_neopaul_task_form">
+        <field name="name">view.neopaul_task.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+		 <field name="short_description"/>
+                <field name="team_id" string="Team"/>
+            </field>
+        </field>
+    </record>
+
+
+    <!--    
+    <record model="ir.ui.view" id="view_neopaul_project_form">
+        <field name="name">view.neopaul_project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Design Vouchers">
+                     <separator string="Designs Vouchers" colspan="4"/>
+                     <field name="design_voucher_ids" colspan="4" nolabel="1" context="{'default_project_id': active_id}">
+                        <form string="Design Vouchers">
+                            <group colspan="4">
+                                <field name="name"/>
+                                <field name="project_id"/>
+                            </group>
+                            <group colspan="4">
+                                    <group colspan="2" col="2">
+                                        <field name="customer_id"/>
+                                        <field name="manager_id"/>
+                                        <field name="designer_id"/>
+                                        <field name="contact_address_id"/>
+                                        <field name="contact2_address_id"/>
+                                        <field name="delivery_address_id"/>
+                                        <field name="date_deadline"/>
+                                        <field name="date_preferred"/>
+                                    </group>
+                                    <group colspan="2" col="2">
+                                        <field name="facade_color"/>
+                                        <field name="facade_type"/>
+                                        <field name="viewing_situation"/>
+                                        <field name="budget"/>
+                                        <field name="atmosphere"/>
+                                        <field name="website"/>
+                                    </group>
+                                    <separator string="Description" colspan="4"/>
+                                    <field name="description" colspan="4" nolabel="1"/>
+                            </group>
+                        </form>
+                     </field>
+                </page>
+                <page string="Project Infos">
+                    <group colspan="2" col="2">
+                        <field name="code"/>
+                        <field name="contact2_id"/>
+                        <field name="delivery_address_id"/>
+                        <field name="date_preferred"/>
+                        <field name="date_deadline_type"/>
+                        <field name="sale_tender_id"/>
+                        <field name="sale_order_id"/>
+                    </group>
+                    <group colspan="4" col="4">
+                        <separator string="Amount" colspan="4"/>
+                        <field name="amount_quote"/>
+                        <field name="amount_advance"/>
+                        <field name="amount_tam"/>
+                        <field name="amount_unit"/>
+                    </group>
+                </page>
+                <page string="Site Information">
+                      <group colspan="2" col="3">
+                        <separator string="" colspan="3"/>
+                        <field name="planning_permission"/>
+                        <field name="planning_permission_text" nolabel="1"/>
+                        <field name="particular_size"/>
+                        <field name="particular_size_text" nolabel="1"/>
+                        <separator string="Cabling Requirement" colspan="3"/>
+                        <field name="cabling_requirements_1"/>
+                        <field name="cabling_requirements_1_text" nolabel="1"/>
+                        <field name="cabling_requirements_2"/>
+                        <field name="cabling_requirements_2_text" nolabel ="1"/>
+                        <field name="cabling_requirements_3"/>
+                        <field name="cabling_requirements_3_text" nolabel="1"/>
+                        <field name="cabling_requirements_4"/>
+                        <field name="cabling_requirements_4_text" nolabel="1"/>
+                        <separator string="Parking" colspan="3"/>
+                        <field name="parking_1"/>
+                        <field name="parking_1_text" nolabel="1"/>
+                        <field name="parking_2"/>
+                        <field name="parking_2_text" nolabel="1"/>
+                        <separator string="Platform" colspan="3"/>
+                        <field name="platform"/>
+                        <field name="platform_text" nolabel="1"/>
+                        <field name="platform_height"/>
+                      </group>
+                      <group colspan="2" col="3">
+                        <separator string="Surface" colspan="3"/>
+                        <field name="surface_1"/>
+                        <field name="surface_1_text" nolabel="1"/>
+                        <field name="surface_2"/>
+                        <field name="surface_2_text" nolabel="1"/>
+                        <field name="surface_4"/>
+                        <field name="surface_5"/>
+                        <separator string="Existing Sign" colspan="2"/>
+                        <field name="existing_commercials_1"/>
+                        <field name="existing_commercials_1_text" nolabel="1"/>
+                        <field name="existing_commercials_2"/>
+                        <field name="existing_commercials_2_text" nolabel="1"/>
+                        <field name="existing_commercials_3"/>
+                        <field name="existing_commercials_3_text" nolabel="1"/>
+                        <separator string="Colors" colspan="2"/>
+                        <field name="color_1"/>
+                        <field name="color_2"/>
+                        <separator string="Lighting" colspan="2"/>
+                        <field name="lighting_type"/>
+                      </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="view_neopaul_project2_form">
+        <field name="name">view.neopaul_project2.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+             <field name="priority" position="after">
+                 <field name="neopaul_stage"/>
+                 <button string="Start Production" type="object" name="production_start" attrs="{'invisible':[('neopaul_stage','in','in_production','done')]}"/>
+            </field>
+        </field>
+    </record>
+    -->
+    
+
+    <!--
+         Neopaul project design voucher
+    -->
+
+    <record model="ir.ui.view" id="view_neopaul_project_design_voucher_tree">
+        <field name="name">view.neopaul_project.design.voucher.tree</field>
+        <field name="model">neopaul.project.design.voucher</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Design Vouchers">
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="customer_id"/>
+                <field name="manager_id"/>
+                <field name="date_deadline"/>
+                <field name="create_date"/>
+		<field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="view_design_voucher_filter" model="ir.ui.view">
+            <field name="name">neopaul.project.design.voucher.search</field>
+            <field name="model">neopaul.project.design.voucher</field>
+            <field name="arch" type="xml">
+                <search string="Search Design Vouchers">
+                    <field name="name" string="Design vouchers" filter_domain="[('name','ilike',self)]"/>
+                    <separator/>
+                    <filter icon="terp-check" string="In Progress" name="sales" domain="[('state','=','pending')]"/>
+                    <filter icon="terp-dolar_ok!" string="Done" domain="[('state','=','done')]"/>
+               </search>
+	    </field>
+        </record>
+
+    <record model="ir.ui.view" id="view_neopaul_project_design_voucher_form">
+        <field name="name">view.neopaul_project.design.voucher.form</field>
+        <field name="model">neopaul.project.design.voucher</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Design Voucher">
+                <group colspan="4" col="4">
+                <field name="name"/>
+                <field name="project_id" on_change="onchange_project(project_id)"/>
+                </group>
+                <group colspan="4">
+                <notebook>
+                    <page string="General">
+                        <group colspan="2" col="2">
+                            <field name="customer_id" domain="[('parent_id','=',False)]"/>
+                            <field name="manager_id"/>
+                            <field name="designer_id"/>
+                            <field name="contact_address_id" domain="[('parent_id','=',customer_id)]"/>
+                            <field name="contact2_address_id" domain="[('parent_id','=',customer_id)]"/>
+                            <field name="delivery_address_id" domain="[('parent_id','=',customer_id)]"/>
+                            <field name="date_deadline"/>
+                        </group>
+                        <group colspan="2" col="2">
+                            <field name="facade_color"/>
+                            <field name="facade_type"/>
+                            <field name="viewing_situation"/>
+                            <field name="budget"/>
+                            <!--                            <field name="atmosphere"/>-->
+                            <field name="website"/>
+                        </group>
+                        <separator string="Description" colspan="4"/>
+                        <field name="description" colspan="4" nolabel="1"/>
+			<field name="state"/>
+                    </page>
+                    <page string="Designs">
+                        <separator string="Designs" colspan="4"/>
+                        <field name="design_ids" colspan="4" nolabel="1" context="{'default_design_voucher_id':active_id}"/>
+                    </page>
+                    <page string="Calculation Voucher">
+                        <field name="calc_voucher_id"/>
+                        <button string="Generate Calculation Voucher" name="calc_voucher_generate" type="object" colspan="2"/>
+                    </page>
+            </notebook>
+        </group>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_neopaul_project_design_voucher">
+        <field name="name">Design Vouchers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">neopaul.project.design.voucher</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_neopaul_project_design_voucher_tree"/>
+    </record>
+
+    <menuitem name="Design vouchers" parent="project.menu_project_management" id="menu_neopaul_project_design_voucher" action="action_neopaul_project_design_voucher" sequence="5"/>
+
+
+    <!--
+         Neopaul project design
+    -->
+
+    <record model="ir.ui.view" id="view_neopaul_project_design_tree">
+        <field name="name">view.neopaul_project.design.tree</field>
+        <field name="model">neopaul.project.design</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Designs">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="design_voucher_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_project_design_form">
+        <field name="name">view.neopaul_project.design.form</field>
+        <field name="model">neopaul.project.design</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Design">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="design_voucher_id" on_change="onchange_design_voucher(design_voucher_id)"/>
+                <notebook colspan="4">
+                    <page string="General">
+                        <separator string="Description" colspan="4"/>
+                        <field name="description" colspan="4" nolabel="1"/>
+                        <field name="state"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+   </record>
+
+        <record id="view_design_filter" model="ir.ui.view">
+            <field name="name">neopaul.project.design.list.select</field>
+            <field name="model">neopaul.project.design</field>
+            <field name="arch" type="xml">
+                <search string="Search Designs">
+                    <field name="name" string="Design" filter_domain="[('name','ilike',self)]"/>
+                    <filter icon="terp-filter-default" string="Draft-In Progress" name="draft_pending" domain="['|',('state','=','draft'),('state','=','pending')]"/>
+                    <separator/>
+                    <filter icon="terp-document-new" string="Draft" name="draft" domain="[('state','=','draft')]"/>
+                    <filter icon="terp-check" string="In Progress" name="sales" domain="[('state','=','inprogress')]"/>
+                    <filter icon="terp-dolar_ok!" string="Done" domain="[('state','=','done')]"/>
+               </search>
+            </field>
+        </record>
+
+
+    <record model="ir.actions.act_window" id="action_neopaul_project_design">
+        <field name="name">Project Designs</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">neopaul.project.design</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_neopaul_project_design_tree"/>
+        <field name="context">{"search_default_draft_pending":1}</field>
+    </record>
+
+    <menuitem name="Designs" parent="project.menu_project_management" id="menu_neopaul_project_design" action="action_neopaul_project_design" sequence="10"/>
+
+
+    <!--
+         Neopaul project calculation voucher
+    -->
+
+    <record model="ir.ui.view" id="view_neopaul_project_calculation_voucher_tree">
+        <field name="name">view.neopaul_project.calculation.voucher.tree</field>
+        <field name="model">neopaul.project.calculation.voucher</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Calculation Vouchers">
+                <field name="name"/>
+                <field name="design_voucher_id"/>
+                <field name="customer_id"/>
+                <field name="manager_id"/>
+                <field name="date_deadline"/>
+                <field name="create_date"/>
+                <field name="total_amount"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_project_calculation_voucher_search">
+        <field name="name">view.neopaul_project.calculation.voucher.search</field>
+        <field name="model">neopaul.project.calculation.voucher</field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+                <search string="Search Designs">
+                    <field name="name" string="Design" filter_domain="[('name','ilike',self)]"/>
+                    <separator/>
+                    <filter icon="terp-check" string="In Progress" domain="[('state','=','pending')]"/>
+                    <filter icon="terp-dolar_ok!" string="Done" domain="[('state','=','done')]"/>
+               </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_project_calculation_voucher_form">
+        <field name="name">view.neopaul_project.calculation.voucher.form</field>
+        <field name="model">neopaul.project.calculation.voucher</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Calculation Voucher">
+                <group colspan="4" col="4">
+                    <field name="name"/>
+                    <field name="project_id"/>
+                    <field name="design_voucher_id"/>
+                </group>
+                <notebook colspan="4">
+                    <page string="General">
+                        <field name="customer_id"/>
+                        <field name="manager_id"/>
+                        <field name="contact_address_id"/>
+                        <field name="contact2_address_id"/>
+                        <field name="delivery_address_id"/>
+                        <field name="date_deadline"/>
+                        <field name="create_date"/>
+                        <field name="foreseen_placement_date_type"/>
+                        <field name="foreseen_placement_date"/>
+                        <!--<field name="total_amount"/>-->
+                        <field name="has_commision"/>
+                        <field name="commision_rate"/>
+                        <separator string="Description" colspan="4"/>
+                        <field name="description" colspan="4" nolabel="1"/>
+                    	<field name="state"/>
+                    </page>
+                    <page string="Offer">
+                        <separator string="" colspan="4"/>
+                        <field name="calc_voucher_line_ids" nolabel="1" colspan="4"/>
+                        <button string="Create Offer" name="offer_generate" type="object" states="pending"/>
+                        <field name="sale_order_id" readonly="1"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_neopaul_project_calculation_voucher">
+        <field name="name">Calculation Vouchers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">neopaul.project.calculation.voucher</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_neopaul_project_calculation_voucher_tree"/>
+    </record>
+
+    <menuitem name="Calculation Vouchers" parent="project.menu_project_management" id="menu_neopaul_project_calculation_voucher" action="action_neopaul_project_calculation_voucher" sequence="15"/>
+
+
+    <!--
+         Neopaul project calculation voucher
+    -->
+
+    <record model="ir.ui.view" id="view_neopaul_project_calculation_voucher_line_tree">
+        <field name="name">view.neopaul_project.calculation_voucher_line.voucher.tree</field>
+        <field name="model">neopaul.project.calculation.voucher.line</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Designs" editable="bottom">
+                <field name="product_id" on_change="onchange_product(product_id)"/>
+                <field name="name"/>
+                <field name="discount"/>
+                <field name="amount"/>
+                <field name="selected"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_project_calculation_voucher_line_form">
+        <field name="name">view.neopaul_project.calculation_voucher_line.voucher.form</field>
+        <field name="model">neopaul.project.calculation.voucher.line</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Design">
+                <field name="product_id" on_change="onchange_product(product_id)"/>
+                <field name="name"/>
+                <field name="calc_voucher_id"/>
+                <field name="amount"/>
+                <field name="discount"/>
+                <separator string="Description" colspan="4"/>
+                <field name="description" colspan="4" nolabel="1"/>
+            </form>
+        </field>
+    </record>
+
+    <act_window name="Projects"
+    res_model="project.project"
+    src_model="res.partner"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_partner_projet"
+    context="{'partner_id':active_id}"
+    domain="[('partner_id','=',active_id)]"
+    />
+
+
+    <act_window name="Purchase Orders"
+    src_model="neopaul.production.order"
+    res_model="purchase.order"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_prodorder_po"
+    context="{'production_order_id':active_id,'default_production_order_id':active_id}"
+    domain="[('production_order_id','=',active_id)]"
+    />
+
+<!--
+    <act_window name="Customers"
+    src_model="crm.lead"
+    res_model="res.partner"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_opportunity_customer"
+    context="{'opportunity_id':active_id}"
+    domain="[('opportunity_id','=',active_id)]"
+    />
+-->
+    
+    <act_window name="Project"
+    src_model="sale.order"
+    res_model="project.project"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_neopaul_sale_order_project"
+    context="{'sale_order_id':active_id}"
+    domain="[('sale_order_id','=',active_id)]"
+    />
+    
+
+    <record model="ir.ui.view" id="view_neopaul_project_payment_term">
+        <field name="name">view.neopaul.project.payment.term.form</field>
+        <field name="model">account.payment.term</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="account.view_payment_term_form"/>        
+        <field name="arch" type="xml">
+            <field name="note" position="after">
+                <separator string="Sales Conditions" colspan="4"/>
+                <field name="sales_conditions" colspan="4" nolabel="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_project_create">
+        <field name="name">view.neopaul.project.create</field>
+        <field name="model">neopaul.project.create</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="New Project">
+                <separator string="Project" colspan="4"/>
+                <field name="name" colspan="4"/>
+                <field name="partner_id" colspan="4" readonly="1"/>
+                <field name="delivery_address_id" on_change="onchange_address(delivery_address_id, name)" colspan="4"/>
+                <button name="project_generate" string="Create Project" type="object" colspan="4"/>
+            </form>
+        </field>
+    </record>
+
+     <act_window id="neopaul_partner_project_create"
+            name="Create Project"
+            res_model="neopaul.project.create" src_model="res.partner"
+            view_id="view_neopaul_project_create"
+            view_mode="form" target="new" view_type="form"
+            context="{'default_partner_id': active_id}"
+            />
+        
+    <record model="ir.ui.view" id="view_neopaul_partner_form">
+        <field name="name">view.neopaul_partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="state_id" position="replace">
+            	<field name="state_id" invisible="1"/>
+            </field>
+      
+        </field>
+    </record>
+       <!-- 
+    <record model="ir.ui.view" id="view_neopaul_partner2_form">
+        <field name="name">view.neopaul_partner2.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="lang" position="after">
+                    <field name="vat"/>
+            </field>
+        </field>
+    </record>
+     -->
+    <record model="ir.ui.view" id="view_neopaul_production_order_tree">
+        <field name="name">view.neopaul_production.order.tree</field>
+        <field name="model">neopaul.production.order</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Production orders">
+                <field name="customer_id"/>
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="account_manager_id"/>
+        		<field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="view_production_order_filter" model="ir.ui.view">
+            <field name="name">neopaul.project.production.order.search</field>
+            <field name="model">neopaul.production.order</field>
+	    <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search Production Orders">
+                    <field name="name" string="Production Order" filter_domain="[('name','ilike',self)]"/>
+                    <field name="customer_id" string="Klant"/>
+                    <separator/>
+                    <filter icon="terp-document-new" string="Pending" name="pending" domain="[('state','=','pending')]"/>
+                    <filter icon="terp-check" string="Validated" name="validated" domain="[('state','=','validated')]"/>
+                    <filter icon="terp-dolar_ok!" string="Done" domain="[('state','=','done')]"/>
+               </search>
+            </field>
+        </record>
+
+    <record model="ir.ui.view" id="view_neopaul_production_order_form">
+        <field name="name">view.neopaul_production.order.form</field>
+        <field name="model">neopaul.production.order</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Production Order">
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="customer_id"/>
+                <field name="account_manager_id"/>
+                <field name="printing_date"/>
+                <notebook colspan="4">
+                    <page string="Items">
+                        <separator string="" colspan="4"/>
+                        <field name="item_ids" colspan="4" nolabel="1" context="{'default_production_order_id':active_id}"/>
+                        <field name="packing_ids" colspan="4" nolabel="1" context="{'default_production_order_id':active_id}" attrs="{'readonly':[('state','in',['pending','done'])]}"/>
+                        <group colspan="4">
+                            <button string="Create Placement Voucher" name="placement_voucher_generate" type="object" states="validated"/>
+                            <!--<field name="placement_voucher_id" states="validated,done"/>-->
+                        </group>
+                        <group colspan="4">
+                            <field name="state" nolabel="1"/>
+                            <button string="Validate" name="prod_order_validate" type="object" states="pending"/>
+                            <button string="Close" name="prod_order_close" type="object" states="validated"/>
+                            <button string="Reset" name="prod_order_reset" type="object" states="done"/>
+                        </group>
+                    </page>
+                        <page string="Purchase Orders">
+                        <field name="purchase_order_ids" colspan="4" nolabel="1" context="{'default_production_order_id':active_id,'default_project_id':project_id}" attrs="{'readonly':[('state','in',['pending','done'])]}"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_neopaul_production_order">
+        <field name="name">Production Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">neopaul.production.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_neopaul_production_order_tree"/>
+    </record>
+
+    <menuitem name="Production" parent="base.menu_main_pm" id="menu_neopaul_production" sequence="10"/>
+    <menuitem name="Production Orders" parent="menu_neopaul_production" id="menu_neopaul_production_order" action="action_neopaul_production_order" sequence="1"/>
+
+    <record model="ir.ui.view" id="view_neopaul_production_order_item_tree">
+        <field name="name">view.neopaul_production.order_item.tree</field>
+        <field name="model">neopaul.production.order.item</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Items">
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_production_order_item_form">
+        <field name="name">view.neopaul_production.order_item.form</field>
+        <field name="model">neopaul.production.order.item</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Item">
+                <field name="name"/>
+                <field name="production_order_id"/>
+                <separator string="Description" colspan="4"/>
+                <field name="description" colspan="4" nolabel="1"/>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_purchase_order_form">
+        <field name="name">view.neopaul_purchase_order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="fiscal_position" position="after">
+                <field name="production_order_id"/>
+            </field>
+            <field name="origin" position="replace">
+                <field name="quality_checked"/>
+                <field name="project_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_purchase_order_tree">
+        <field name="name">view.neopaul_purchase_order.tree"</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="date_order" position="after">
+                <field name="quality_checked"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_production_order_packing_tree">
+        <field name="name">view.neopaul_production.order_packing.tree</field>
+        <field name="model">neopaul.production.order.packing</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="packing Lists" editable="bottom">
+                <field name="name"/>
+                <field name="quality_checked"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_production_order_packing_form">
+        <field name="name">view.neopaul_production.order_packing.form</field>
+        <field name="model">neopaul.production.order.packing</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="packing List">
+                <field name="name"/>
+                <field name="production_order_id"/>
+                <field name="quality_checked"/>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_placement_voucher_tree">
+        <field name="name">view.neopaul_placement.voucher.tree</field>
+        <field name="model">neopaul.placement.voucher</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Placement Vouchers">
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="production_order_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_neopaul_placement_voucher_form">
+        <field name="name">view.neopaul_placement.voucher.form</field>
+        <field name="model">neopaul.placement.voucher</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Placement Voucher">
+                <field name="name"/>
+                <field name="production_order_id"/>
+                <field name="project_id"/>
+                <field name="account_manager_id"/>
+                <field name="customer_id"/>
+                <field name="contact_id"/>
+                <field name="delivery_id"/>
+                <!--                <field name="contact_phone"/>
+                <field name="contact_email"/>-->
+		<field name="designdrawing"/>
+		<field name="simulationdrawing"/>
+		<field name="customerplan"/>
+		<field name="note" colspan="4" nolabel="1"/>
+                <group colspan="4">
+                    <field name="state" nolabel="1"/>
+                    <button string="Validate" name="prod_order_close" type="object" states="pending"/>
+                    <button string="Reset" name="prod_order_reset" type="object" states="done"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+        <record id="view_placement_voucher_filter" model="ir.ui.view">
+            <field name="name">neopaul.placement.voucher.search</field>
+            <field name="model">neopaul.placement.voucher</field>
+	    <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search Placement vouchers">
+                    <field name="name" string="Placement Voucher" filter_domain="[('name','ilike',self)]"/>
+                    <separator/>
+                    <filter icon="terp-document-new" string="Pending" name="pending" domain="[('state','=','pending')]"/>
+                    <filter icon="terp-dolar_ok!" string="Done" domain="[('state','=','done')]"/>
+               </search>
+            </field>
+        </record>
+
+        <record id="view_neopaul_order_form" model="ir.ui.view">
+            <field name="name">neopaul.sale.order.form</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+    		    <field name="project_id" position="before">
+	    	    	<field name="partner_contact_id"/>
+                    <field name="project_project_id"/>
+		        </field>
+	        </field>
+	    </record>
+
+        <record id="view_neopaul_order_tree" model="ir.ui.view">
+            <field name="name">neopaul.sale.order.tree</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+    		    <field name="partner_id" position="after">
+                    <field name="project_project_id"/>
+		        </field>
+	        </field>
+	    </record>
+
+        <record id="view_neopaul_quotation_tree" model="ir.ui.view">
+            <field name="name">neopaul.sale.order.quoatation.tree</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+    		    <field name="partner_id" position="after">
+                    <field name="project_project_id"/>
+		        </field>
+	    </field>
+	</record>
+
+
+    <record model="ir.actions.act_window" id="action_neopaul_placement_voucher">
+        <field name="name">Placement Vouchers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">neopaul.placement.voucher</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_neopaul_placement_voucher_tree"/>
+    </record>
+
+    <menuitem name="Placement Vouchers" parent="menu_neopaul_production" id="menu_neopaul_placement_voucher" action="action_neopaul_placement_voucher" sequence="1"/>
+
+
+
+  <record model="ir.ui.view" id="view_calc_sale_order_create">
+        <field name="name">view.calc.sale.order.create</field>
+        <field name="model">calc.sale.order.create</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="New Calculation Voucher">
+                <separator string="Calculation Voucher" colspan="4"/>
+                <label string="Maak een Calculatiebon voor de project: "/>
+                <field name="project_id" readonly="1" nolabel="1"/>
+                <button name="calc_create" string="Maak Calculatiebon" type="object" colspan="4"/>
+            </form>
+        </field>
+    </record>
+
+     <act_window id="neopaul_calc_sale_ordercreate"
+            name="Maak Calculatiebon"
+            res_model="calc.sale.order.create" 
+            src_model="project.project"
+            view_id="view_calc_sale_order_create"
+            view_mode="form" target="new" view_type="form"
+            context="{'default_project_id': active_id}"
+            />
+
+<record model="ir.ui.view" id="invoice_form_shipping_address"><field name="name">account.invoice.form.shipping.address</field><field name="model">account.invoice</field><field name="inherit_id" ref="account.invoice_form"/><field name="arch" type="xml"><field name="fiscal_position" position="before"><field name="contact_id"/></field></field></record>
+
+  <record model="ir.ui.view" id="view_account_invoice_project_form">
+        <field name="name">view.account_invoice.project.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="account_id" position="after">
+                <field name="project_project_id"/>
+            </field>
+            <field name="move_id" position="after">
+                <field name="description"/>
+            </field>
+	    <field name="comment" position="before">
+		<field name="vat_note_id"/>
+	    </field>
+        </field>
+    </record>
+
+  <record model="ir.ui.view" id="view_stock_picking_project_tree">
+        <field name="name">view.stock_picking.project.tree</field>
+        <field name="model">stock.picking.in</field>
+        <field name="inherit_id" ref="stock.view_picking_in_tree"/>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="project_id"/>
+            </field>
+        </field>
+    </record>
+
+  <record model="ir.ui.view" id="view_stock_picking_project_form">
+        <field name="name">view.stock_picking.project.form</field>
+        <field name="model">stock.picking.in</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="project_id"/>
+            </field>
+        </field>
+    </record>
+
+    </data>
+</openerp>
+

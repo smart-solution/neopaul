@@ -1,0 +1,2307 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* neopaul_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-12 10:45+0000\n"
+"PO-Revision-Date: 2013-06-24 07:51+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.5\n"
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_project_sale_order_email_nototal
+msgid "Quote / Order (Email) No Total"
+msgstr "Offerte / Order (Email) zonder totaal"
+
+#. module: neopaul_project
+#: field:neopaul.project.design.voucher,designer_id:0
+msgid "Designer"
+msgstr "Ontwerper"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "maatname"
+msgstr "maatname"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Contactpersoon 1"
+msgstr "Contactpersoon 1"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "yes"
+msgstr "ja"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "no"
+msgstr "nee"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Contactpersoon 2"
+msgstr "Contactpersoon 2"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Lighting"
+msgstr "Verlichting"
+
+#. module: neopaul_project
+#: field:project.project,surface_2:0 field:project.project,surface_2_text:0
+msgid "Concrete anchor needed ?"
+msgstr "Betonanker nodig ?"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+msgid "CALCULATIEBON"
+msgstr "CALCULATIEBON"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Alle op de openbare weg aangebrachte lichtreklames en uithangborden dienen "
+"het onderwerp uit te maken van een studie vanwege de bevoegde besturen op "
+"basis van de ter plaatse geldende gemeente - reglementeringen."
+msgstr ""
+"Alle op de openbare weg aangebrachte lichtreklames en uithangborden dienen "
+"het onderwerp uit te maken van een studie vanwege de bevoegde besturen op "
+"basis van de ter plaatse geldende gemeente - reglementeringen."
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Welke hoogte?"
+msgstr "Welke hoogte?"
+
+#. module: neopaul_project
+#: view:neopaul.project.calculation.voucher:0
+msgid "Create Offer"
+msgstr "Maak offerte"
+
+#. module: neopaul_project
+#: selection:neopaul.project.calculation.voucher,foreseen_placement_date_type:0
+#: selection:project.project,date_deadline_type:0
+#: selection:project.project,deadline_date_type:0
+msgid "Fixed"
+msgstr "Vast"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "VAT"
+msgstr "BTW"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "straat"
+msgstr "straat"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:537
+#, python-format
+msgid "Please create a service product called design"
+msgstr "Maak een serviceproduct design"
+
+#. module: neopaul_project
+#: view:project.project:0 field:project.project,surface_3:0
+#: field:project.project,surface_3_text:0
+msgid "Surface"
+msgstr "Locatie"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Kostenplaats"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Paklijst"
+msgstr "Paklijst"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_res_partner
+msgid "Partner"
+msgstr "Relatie"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_project_calculation_voucher
+msgid "Project calculation Voucher"
+msgstr "Calculatiebon"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "BTW nummer :"
+msgstr "BTW nummer :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "2 jaar op LED verlichting, mits aanwezigheid van lichtsensor"
+msgstr "2 jaar op LED verlichting, mits aanwezigheid van lichtsensor"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Folies"
+msgstr "Folies"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Disc.(%)"
+msgstr "korting.(%)"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+msgid "Stevige achtergrond?"
+msgstr "Stevige achtergrond?"
+
+#. module: neopaul_project
+#: field:project.project,platform:0 field:project.project,platform_text:0
+msgid "Platform needed ?"
+msgstr "Hoogwerker nodig ?"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Shipping address :"
+msgstr "Leveringsadres"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Betonanker voorzien?"
+msgstr "Betonanker voorzien?"
+
+#. module: neopaul_project
+#: field:neopaul.project.design.voucher,viewing_situation:0
+msgid "Viewing Situation"
+msgstr "Viewing Situation"
+
+#. module: neopaul_project
+#: model:ir.ui.menu,name:neopaul_project.menu_neopaul_project_design_voucher
+msgid "Design vouchers"
+msgstr "Ontwerpbon"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "€ 150       (ja/neen)"
+msgstr "€ 150       (ja/neen)"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Klant"
+msgstr "Klant"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.project.project:0
+msgid "contactpersoon"
+msgstr "contactpersoon"
+
+#. module: neopaul_project
+#: view:neopaul.production.order:0 field:neopaul.production.order,item_ids:0
+#: view:neopaul.production.order.item:0
+msgid "Items"
+msgstr "Items"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "plannen van klant"
+msgstr "plannen van klant"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+#: field:neopaul.project.design.voucher,budget:0
+msgid "Budget"
+msgstr "Budget"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Designs Vouchers"
+msgstr "Ontwerpbonnen"
+
+#. module: neopaul_project
+#: field:neopaul.placement.voucher,contact_id:0
+msgid "Contact"
+msgstr "Contact"
+
+#. module: neopaul_project
+#: field:project.project,date_deadline_type:0
+msgid "Placement Deadline"
+msgstr "plaatsingsdeadline"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Accountmanager"
+msgstr "Accountmanager"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher.line,discount:0
+msgid "Discount (%)"
+msgstr "Korting (%)"
+
+#. module: neopaul_project
+#: field:neopaul.placement.voucher,state:0
+#: field:neopaul.production.order,state:0
+#: field:neopaul.project.calculation.voucher,state:0
+#: field:neopaul.project.design,state:0
+#: field:neopaul.project.design.voucher,state:0
+msgid "State"
+msgstr "Staat"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "LICHTCEL :"
+msgstr "LICHTCEL :"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+msgid "inkijksituatie"
+msgstr "inkijksituatie"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_project_design_voucher
+msgid "Project Design Voucher (Ontwerpbon)"
+msgstr "Ontwerpbon"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "BETALING :"
+msgstr "BETALING :"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "aard grond"
+msgstr "aard grond"
+
+#. module: neopaul_project
+#: report:neopaul.production.order:0
+msgid "Status"
+msgstr "Status"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Soort achtergrond?"
+msgstr "Soort achtergrond?"
+
+#. module: neopaul_project
+#: field:neopaul.project.create,name:0 view:project.project:0
+msgid "Project Name"
+msgstr "Naam project"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Plaatsings- / leveringsadres"
+msgstr "Plaatsings- / leveringsadres"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Geachte"
+msgstr "Geachte"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Vereisten bekabeling"
+msgstr "Vereisten bekabeling"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "voorschot"
+msgstr "voorschot"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"o de relatief grote doorsnede van de neonbuizen ( 12 à 15 mm  voor de "
+"letters en 18 mm voor de rechte buizen ) zorgt voor een betere geleiding in "
+"de buis en voorkomt het voortijdig zwartbranden."
+msgstr ""
+"o de relatief grote doorsnede van de neonbuizen ( 12 à 15 mm  voor de "
+"letters en 18 mm voor de rechte buizen ) zorgt voor een betere geleiding in "
+"de buis en voorkomt het voortijdig zwartbranden."
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_project_sale_order_paper_nototal
+msgid "Quote / Order (Paper) No Total"
+msgstr "Offerte / Order (op briefpapier) Zonder Totaal"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.action_neopaul_production_order
+#: model:ir.ui.menu,name:neopaul_project.menu_neopaul_production_order
+#: view:project.project:0
+msgid "Production Orders"
+msgstr "Productieorders"
+
+#. module: neopaul_project
+#: view:neopaul.placement.voucher:0 view:neopaul.production.order:0
+msgid "Validate"
+msgstr "Valideren"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Quantity"
+msgstr "Hoeveelheid"
+
+#. module: neopaul_project
+#: field:project.project,color_2:0
+msgid "Films Color"
+msgstr "Vinylkleuren"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"+/- 6 weken na voorlegging vergunning en aanlevering van alle artwork ( EPS "
+"files, kleurreferenties ..)"
+msgstr ""
+"+/- 6 weken na voorlegging vergunning en aanlevering van alle artwork ( EPS "
+"files, kleurreferenties ..)"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "TVA :"
+msgstr "BTW :"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:neopaul.project.design,state:0
+#: selection:neopaul.project.design.voucher,state:0
+msgid "In Progress"
+msgstr "Lopend"
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_placement_voucher
+#: view:neopaul.placement.voucher:0
+#: view:neopaul.project.calculation.voucher:0
+msgid "Placement Voucher"
+msgstr "Plaatsingsbon"
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_placement_voucher
+#: view:project.project:0
+msgid "Placement Vouchers"
+msgstr "Plaatsingsbonnen"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_project_sale_order
+msgid "Offers"
+msgstr "Offerten"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Plaats voor transfo voorzien?"
+msgstr "Plaats voor transfo voorzien?"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"o alle voorgestelde transformatoren staan op regime 25 of 50 mA en zijn "
+"uitgerust met aardlek-en breukschakelaar conform de nieuwe Europese Cenelec "
+"normen.  Het voltage per transformator overschrijdt de 9000 V niet, dit om "
+"de belasting op de electrodes te minimaliseren."
+msgstr ""
+"o alle voorgestelde transformatoren staan op regime 25 of 50 mA en zijn "
+"uitgerust met aardlek-en breukschakelaar conform de nieuwe Europese Cenelec "
+"normen.  Het voltage per transformator overschrijdt de 9000 V niet, dit om "
+"de belasting op de electrodes te minimaliseren."
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_project_production_voucher
+#: view:neopaul.production.order:0
+#: view:project.project:0
+msgid "Production orders"
+msgstr "Productieorders"
+
+#. module: neopaul_project
+#: field:project.project,platform_height:0
+msgid "Platform Height"
+msgstr "Hoogte hoogwerker"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Tel. :"
+msgstr "Tel. :"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,description:0
+#: field:neopaul.project.calculation.voucher.line,description:0
+#: field:neopaul.project.design,description:0
+#: field:neopaul.project.design.voucher,description:0
+msgid "description"
+msgstr "beschrijving"
+
+#. module: neopaul_project
+#: field:project.project,surface_4:0
+msgid "Kind of surface ?"
+msgstr "Welke gevel ?"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "Wating Offer"
+msgstr "Wachten op offerte"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "Waiting for Production"
+msgstr "Wachten op productie"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o ovengedroogd"
+msgstr "o ovengedroogd"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.production.order:0
+msgid "Quality Controlled"
+msgstr "Kwaliteitscontrole"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:574
+#, python-format
+msgid "No Pricelist could be found"
+msgstr "Geen prijslijst gevonden"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "TECHNISCHE FICHE"
+msgstr "TECHNISCHE FICHE"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher.line,amount:0
+#: field:neopaul.project.design,amount:0 view:project.project:0
+msgid "Amount"
+msgstr "Bedrag"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"o de neonbuizen worden gepoederd na thermische vorming, hierdoor wordt het "
+"zwart worden van de bochten vermeden."
+msgstr ""
+"o de neonbuizen worden gepoederd na thermische vorming, hierdoor wordt het "
+"zwart worden van de bochten vermeden."
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "plaats transfo"
+msgstr "plaats transfo"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Bestaande reclames"
+msgstr "Bestaande reclames"
+
+#. module: neopaul_project
+#: field:project.project,shop_opening_dates:0
+msgid "Shop Openning Dates"
+msgstr "Openingsuren"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o alle voorgestelde electrodes zijn geschikt tot 150 mA"
+msgstr "o alle voorgestelde electrodes zijn geschikt tot 150 mA"
+
+#. module: neopaul_project
+#: field:neopaul.project.create,directory_name:0
+msgid "Directory Name"
+msgstr "Directory Naam"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "PROJECTBON"
+msgstr "PROJECTBON"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher.line,selected:0
+msgid "Selected"
+msgstr "Geselecteerd"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_project_calculation_voucher_line
+msgid "Project Calculation Voucher Line"
+msgstr "Calulatiebon lijn"
+
+#. module: neopaul_project
+#: report:neopaul.production.order:0
+#: field:neopaul.production.order,packing_ids:0
+msgid "Packing Lists"
+msgstr "Packing lijst"
+
+#. module: neopaul_project
+#: field:project.project,planning_permission:0
+#: field:project.project,planning_permission_text:0
+msgid "Planning Permission"
+msgstr "Bouwvergunning aanwezig ?"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"De goederen blijven tevens contant betaalbaar ook indien deze door factoren "
+"extern aan Acryl-neon bvba. niet geplaatst kunnen worden."
+msgstr ""
+"De goederen blijven tevens contant betaalbaar ook indien deze door factoren "
+"extern aan Acryl-neon bvba. niet geplaatst kunnen worden."
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o LED toepassingen :"
+msgstr "o LED toepassingen :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Invoice address :"
+msgstr "Facturatie adres :"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.neopaul_partner_project_create
+#: view:neopaul.project.create:0
+msgid "Create Project"
+msgstr "Maak een project aan "
+
+#. module: neopaul_project
+#: field:res.users,initials:0
+msgid "Initials"
+msgstr "Initialen"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Validated Sale Order"
+msgstr "Goedgekeurd verkoopsorder"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+msgid "Commissie"
+msgstr "Commissie"
+
+#. module: neopaul_project
+#: field:neopaul.production.order.packing,quality_checked:0
+#: field:purchase.order,quality_checked:0
+msgid "Quality Check"
+msgstr "Quality Check"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Vergunning nodig?"
+msgstr "Vergunning nodig?"
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_project_sale_order_email
+msgid "Quote / Order (Email)"
+msgstr "Offerte / Order (Email)"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,date_deadline:0
+#: field:neopaul.project.design.voucher,date_deadline:0
+msgid "Deadline"
+msgstr "Deadline Offerte"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Hoogwerker nodig?"
+msgstr "Hoogwerker nodig?"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "telefoon"
+msgstr "telefoon"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "In Production"
+msgstr "In Productie"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Platform"
+msgstr "Hoogwerker"
+
+#. module: neopaul_project
+#: field:neopaul.placement.voucher,account_manager_id:0
+#: field:neopaul.production.order,account_manager_id:0
+#: field:neopaul.project.calculation.voucher,manager_id:0
+#: field:neopaul.project.design.voucher,manager_id:0
+#: field:project.project,manager_id:0
+msgid "Account Manager"
+msgstr "Account Manager"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Order N°"
+msgstr "Order N°"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Werfvoorbereiding"
+msgstr "Werfvoorbereiding"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Aanvraag om toelating tot het plaatsen van buitenreklamen aan de betrokken "
+"instanties dient gedaan te worden door de klant in akkoord met de eigenaar "
+"van het gebouw of grond. Acryl neon bvba (Neopaul)  kan echter instaan voor "
+"het opmaken van de betreffende gevelplans en bijgaande formulieren op naam "
+"en voor rekening van haar kliënteel."
+msgstr ""
+"Aanvraag om toelating tot het plaatsen van buitenreklamen aan de betrokken "
+"instanties dient gedaan te worden door de klant in akkoord met de eigenaar "
+"van het gebouw of grond. Acryl neon bvba (Neopaul)  kan echter instaan voor "
+"het opmaken van de betreffende gevelplans en bijgaande formulieren op naam "
+"en voor rekening van haar kliënteel."
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_production_order_packing
+msgid "neopaul.production.order.packing"
+msgstr "neopaul.production.order.packing"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Placement Date"
+msgstr "Plaatsingsdatum"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.paper:0
+msgid "Total :"
+msgstr "Totaal :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "voor acryl – neon bvba,"
+msgstr "voor acryl – neon bvba,"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:544
+#, python-format
+msgid "Please add a customer to this calculation voucher"
+msgstr "Voeg een klant toe aan deze calculatiebon"
+
+#. module: neopaul_project
+#: field:project.project,neopaul_stage:0
+msgid "Stage"
+msgstr "Stadium"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o Neon :"
+msgstr "o Neon :"
+
+#. module: neopaul_project
+#: model:ir.ui.menu,name:neopaul_project.menu_neopaul_project_design
+#: view:neopaul.project.calculation.voucher.line:0
+#: view:neopaul.project.design:0 view:neopaul.project.design.voucher:0
+#: field:neopaul.project.design.voucher,design_ids:0
+msgid "Designs"
+msgstr "Ontwerpen"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Losse grond?"
+msgstr "Vaste ondergrond ?"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Hopend u hiermee van dienst te zijn geweest, en u dankend voor het "
+"vertrouwen, verblijven wij,"
+msgstr ""
+"Hopend u hiermee van dienst te zijn geweest, en u dankend voor het "
+"vertrouwen, verblijven wij,"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "PS : bezoek onze website : www.neopaul.com"
+msgstr "PS : bezoek onze website : www.neopaul.com"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Quotation Date"
+msgstr "Offerte datum"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+msgid "Datum Indienen Ontwerp"
+msgstr "Datum Indienen Ontwerp"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"De bvba Acryl - neon (Neopaul ) heeft echter geen inspraak in de "
+"beslissingen hieromtrent en kan niet verantwoordelijk gesteld worden voor "
+"producties waar geen vergunning voor is."
+msgstr ""
+"De bvba Acryl - neon (Neopaul ) heeft echter geen inspraak in de "
+"beslissingen hieromtrent en kan niet verantwoordelijk gesteld worden voor "
+"producties waar geen vergunning voor is."
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o LED : Tridonic transformatoren van Zwitserse makelij"
+msgstr "o LED : Tridonic transformatoren van Zwitserse makelij"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:378
+#, python-format
+msgid "Unable to create new calculation voucher"
+msgstr "Onmogelijk een nieuwe calculatiebon aan te maken"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.paper:0
+msgid "Taxes :"
+msgstr "BTW :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "WAARBORG :"
+msgstr "WAARBORG :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "LEVERINGSTERMIJN :"
+msgstr "LEVERINGSTERMIJN :"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+msgid "Voorziene plaatsingsdatum"
+msgstr "Voorziene plaatsingsdatum"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "werkvergunning"
+msgstr "werkvergunning"
+
+#. module: neopaul_project
+#: field:neopaul.project.create,delivery_address_id:0
+msgid "Delivery Place"
+msgstr "Leveringsadres"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,commision_rate:0
+msgid "Commission Rate (%)"
+msgstr "Commissie (%)"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+#: field:neopaul.project.design.voucher,website:0
+msgid "Website"
+msgstr "Website"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o IP 67"
+msgstr "o IP 67"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.action_neopaul_placement_voucher
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_project_placement_voucher
+#: model:ir.ui.menu,name:neopaul_project.menu_neopaul_placement_voucher
+#: view:neopaul.placement.voucher:0
+msgid "Placement Vouchers"
+msgstr "Plaatsingsbonnen"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,amount:0
+#: field:neopaul.project.calculation.voucher,total_amount:0
+msgid "Total Amount"
+msgstr "Totaal"
+
+#. module: neopaul_project
+#: field:project.project,existing_commercials_1:0
+#: field:project.project,existing_commercials_1_text:0
+msgid "Existing Sign ?"
+msgstr "Bestaande lichtreclame ?"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:337
+#: code:addons/neopaul_project/neopaul_project.py:378
+#: code:addons/neopaul_project/neopaul_project.py:472
+#: code:addons/neopaul_project/neopaul_project.py:523
+#: code:addons/neopaul_project/neopaul_project.py:529
+#: code:addons/neopaul_project/neopaul_project.py:612
+#: code:addons/neopaul_project/neopaul_project.py:752
+#, python-format
+msgid "Creation Error"
+msgstr "Creatiefout"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Stockeren?"
+msgstr "Stockeren?"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o Metaal :"
+msgstr "o Metaal :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "........................................................"
+msgstr "........................................................"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_res_company
+msgid "Companies"
+msgstr "Bedrijven"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_project_design_voucher
+#: model:ir.actions.act_window,name:neopaul_project.action_neopaul_project_design_voucher
+#: view:neopaul.project.design.voucher:0 view:project.project:0
+#: field:project.project,design_voucher_ids:0
+msgid "Design Vouchers"
+msgstr "Ontwerpbonnen"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Indien u over enig project meer informatie verlangt, aarzel dan niet om ons "
+"telefonisch te contacteren op het centrale nummer 00 32 3 321 28 77, per fax "
+"00 32 3 322 84 24 of per e-mail : info @ neopaul.com"
+msgstr ""
+"Indien u over enig project meer informatie verlangt, aarzel dan niet om ons "
+"telefonisch te contacteren op het centrale nummer 00 32 3 321 28 77, per fax "
+"00 32 3 322 84 24 of per e-mail : info @ neopaul.com"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "€ 250       (ja/neen)"
+msgstr "€ 250       (ja/neen)"
+
+#. module: neopaul_project
+#: field:neopaul.project.design.voucher,atmosphere:0
+msgid "Atmosphere"
+msgstr "Atmosfeer"
+
+#. module: neopaul_project
+#: field:neopaul.project.design,code:0 field:project.project,code:0
+msgid "Code"
+msgstr "Code"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Your Reference"
+msgstr "Uw referentie"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "PLAATSING :"
+msgstr "PLAATSING :"
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_project_design_voucher
+#: field:neopaul.project.calculation.voucher,design_voucher_id:0
+#: field:neopaul.project.design,design_voucher_id:0
+#: view:neopaul.project.design.voucher:0
+msgid "Design Voucher"
+msgstr "Ontwerpbon"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Infolocatie"
+msgstr "Infolocatie"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,foreseen_placement_date:0
+#: field:neopaul.project.calculation.voucher,foreseen_placement_date_type:0
+msgid "Foreseen Placement date"
+msgstr "Voorziene plaatsingsdatum"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.production.order:0
+msgid "project"
+msgstr "project"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"o alle metalen onderdelen worden verlakt d.m.v. 1 grondlaag + 2 lagen "
+"polyurethaanlak"
+msgstr ""
+"o alle metalen onderdelen worden verlakt d.m.v. 1 grondlaag + 2 lagen "
+"polyurethaanlak"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "te vernietigen"
+msgstr "te vernietigen"
+
+#. module: neopaul_project
+#: field:project.project,cabling_requirements_4:0
+#: field:project.project,cabling_requirements_4_text:0
+msgid "220v existing ?"
+msgstr "230 Volt aanwezig ?"
+
+#. module: neopaul_project
+#: field:project.project,particular_size:0
+#: field:project.project,particular_size_text:0
+msgid "Need of Measurement"
+msgstr "Maatname"
+
+#. module: neopaul_project
+#: field:project.project,amount_unit:0
+msgid "Unit"
+msgstr "Volgens eenheidsprijzen"
+
+#. module: neopaul_project
+#: field:project.project,cabling_requirements_1:0
+#: field:project.project,cabling_requirements_1_text:0
+msgid "To set in advance ?"
+msgstr "Op voorhand te plaatsen ?"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:158
+#, python-format
+msgid ""
+"Cannot Start Production\n"
+"No end date has been given for this project"
+msgstr ""
+"Productie kan niet opgestart worden. Er is geen plaatsingsdatum opgegeven "
+"voor dit project"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Unit Price"
+msgstr "Eenheidsprijs"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "parkeren"
+msgstr "parkeren"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:178
+#, python-format
+msgid ""
+"Cannot Start Production\n"
+"All site information fields must be filled to start production"
+msgstr ""
+"Productie kan niet opgestart worden.  Alle site gegevens dienen eerst "
+"ingevuld te worden."
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_project_calculation_voucher
+#: view:neopaul.project.calculation.voucher:0
+#: field:neopaul.project.calculation.voucher.line,calc_voucher_id:0
+#: view:neopaul.project.design.voucher:0
+#: view:neopaul.project:0
+#: field:neopaul.project.design.voucher,calc_voucher_id:0
+#: field:sale.order,calc_voucher_id:0
+msgid "Calculation Voucher"
+msgstr "Calculatiebon"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:158
+#: code:addons/neopaul_project/neopaul_project.py:178
+#: code:addons/neopaul_project/neopaul_project.py:185 view:project.project:0
+#, python-format
+msgid "Start Production"
+msgstr "Start productie"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Naar aanleiding van uw prijsaanvraag, waarvoor onze dank,hebben wij het  "
+"genoegen  u overeenkomstig onze Algemene Verkoops -en Aannemingsvoorwaarden, "
+"onze prijsofferte voor levering en plaatsing van onderstaande aan te bieden :"
+msgstr ""
+"Naar aanleiding van uw prijsaanvraag, waarvoor onze dank,hebben wij het  "
+"genoegen  u overeenkomstig onze Algemene Verkoops -en Aannemingsvoorwaarden, "
+"onze prijsofferte voor levering en plaatsing van onderstaande aan te bieden :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Price"
+msgstr "Prijs"
+
+#. module: neopaul_project
+#: selection:neopaul.project.design,state:0
+msgid "Refused"
+msgstr "Geweigerd"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "extra info"
+msgstr "extra info"
+
+#. module: neopaul_project
+#: field:neopaul.placement.voucher,name:0
+#: field:neopaul.production.order,name:0
+#: field:neopaul.production.order.item,name:0
+#: field:neopaul.production.order.packing,name:0
+#: field:neopaul.project.calculation.voucher,name:0
+#: field:neopaul.project.calculation.voucher.line,name:0
+#: field:neopaul.project.design,name:0
+#: field:neopaul.project.design.voucher,name:0 view:project.project:0
+msgid "Name"
+msgstr "Naam"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "combinatie tijdschakelaar, lichtcel, relais :"
+msgstr "combinatie tijdschakelaar, lichtcel, relais :"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Plaatsing-/Leveringadres"
+msgstr "Plaatsing-/Leveringadres"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Werf bereikbaar?"
+msgstr "Werf bereikbaar?"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Werfsituatie"
+msgstr "Werfsituatie"
+
+#. module: neopaul_project
+#: field:neopaul.project.design.voucher,facade_color:0
+msgid "Facade Color"
+msgstr "Kleur van de gevel"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Elektriciteit"
+msgstr "Elektriciteit"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"voedingsleiding 220 V + aarding, via de brandweerschakelaar tot aan de "
+"transformatoren en lichtreclame, ten laste van kliënt of in regie"
+msgstr ""
+"voedingsleiding 220 V + aarding, via de brandweerschakelaar tot aan de "
+"transformatoren en lichtreclame, ten laste van kliënt of in regie"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Cabling Requirement"
+msgstr "Welke kabels"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Bekabeling blind weg te werken?"
+msgstr "Bekabeling blind weg te werken?"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:472
+#, python-format
+msgid "Unable to create new project"
+msgstr "Er kan geen nieuw project gecreëerd worden"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "1 jaar op electrische onderdelen, (excl .TL lampen  )"
+msgstr "1 jaar op electrische onderdelen, (excl .TL lampen  )"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Ondergrond"
+msgstr "Ondergrond"
+
+#. module: neopaul_project
+#: report:neopaul.production.order:0
+msgid "Quality controlled"
+msgstr "Kwaliteit gecontroleerd"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+msgid "ONTWERPBON"
+msgstr "ONTWERPBON"
+
+#. module: neopaul_project
+#: field:project.project,parking_1:0 field:project.project,parking_1_text:0
+msgid "Need allowance ?"
+msgstr "Vergunning nodig ?"
+
+#. module: neopaul_project
+#: field:project.project,sale_order_id:0
+msgid "Sale Order"
+msgstr "Verkoopsorder"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Constructies"
+msgstr "Constructies"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "telefoon / gsm"
+msgstr "telefoon / gsm"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o SMD 5050"
+msgstr "o SMD 5050"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "gemmeentelijke vergunning"
+msgstr "gemeentelijke vergunning"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_project_create
+msgid "neopaul.project.create"
+msgstr "neopaul.project.create"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "VOEDING :"
+msgstr "VOEDING :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "In bijlage vindt u gedetailleerde info over uw lichtproject."
+msgstr "In bijlage vindt u gedetailleerde info over uw lichtproject."
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Fax :"
+msgstr "Fax :"
+
+#. module: neopaul_project
+#: view:neopaul.project.design.voucher:0
+msgid "Generate Calculation Voucher"
+msgstr "Maak een calculatiebon"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:544
+#, python-format
+msgid "Customer Error"
+msgstr "Klantenfout"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Aanwezig?"
+msgstr "Aanwezig?"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Maatname nodig?"
+msgstr "Maatname nodig?"
+
+#. module: neopaul_project
+#: view:neopaul.project.create:0
+msgid "New Project"
+msgstr "Nieuw project"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:185
+#, python-format
+msgid ""
+"Cannot Start Production\n"
+"No sale order have been confirmed for this project"
+msgstr ""
+"Productie kan niet gestart worden.Er is geen verkoopsorder gevalideerd voor "
+"dit project."
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "ontwerptekening"
+msgstr "ontwerptekening"
+
+#. module: neopaul_project
+#: report:neopaul.production.order:0
+msgid "PRODUCTIEBON"
+msgstr "PRODUCTIEBON"
+
+#. module: neopaul_project
+#: field:project.project,surface_1:0 field:project.project,surface_1_text:0
+msgid "Unstable ground ?"
+msgstr "Vaste ondergrond ?"
+
+#. module: neopaul_project
+#: field:project.project,parking_2:0 field:project.project,parking_2_text:0
+msgid "Site accessible ?"
+msgstr "Site toegankelijk ?"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "die niet op de offerte of het ontwerp is vermeld"
+msgstr "die niet op de offerte of het ontwerp is vermeld"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "af te nemen"
+msgstr "af te nemen"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "bouwvergunning"
+msgstr "bouwvergunning"
+
+#. module: neopaul_project
+#: field:project.project,amount_tam:0
+msgid "Time and Material"
+msgstr "In regie"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "betonstoel"
+msgstr "betonstoel"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "versturen naar"
+msgstr "versturen naar"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.action_neopaul_project_design
+msgid "Project Designs"
+msgstr "Project Ontwerpen"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Bouwvergunning nodig?"
+msgstr "Bouwvergunning nodig?"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.production.order:0
+msgid "klant"
+msgstr "klant"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "Waiting Order"
+msgstr "Wachten op orderbevestiging"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "Waiting Offer"
+msgstr "Wachten op offerte"
+
+#. module: neopaul_project
+#: view:neopaul.project.calculation.voucher.line:0
+#: view:neopaul.project.design:0
+msgid "Design"
+msgstr "Ontwerp"
+
+#. module: neopaul_project
+#: selection:neopaul.production.order.packing,quality_checked:0
+#: selection:purchase.order,quality_checked:0
+msgid "Yes"
+msgstr "Ja"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+msgid "Kleur Gevel"
+msgstr "Kleur Gevel"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Kleuren"
+msgstr "Kleuren"
+
+#. module: neopaul_project
+#: sql_constraint:res.partner:0
+msgid "Customer name must be unique"
+msgstr "Klantennaam moet uniek zijn"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:537
+#, python-format
+msgid "Design Product Error"
+msgstr "Design Product Fout"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:548
+#, python-format
+msgid "Please add a vat number to the customer %s"
+msgstr "BTW nummer van klant nog toe te voegen %s"
+
+#. module: neopaul_project
+#: selection:neopaul.placement.voucher,state:0
+#: selection:neopaul.production.order,state:0
+#: selection:neopaul.project.calculation.voucher,state:0
+msgid "Pending"
+msgstr "Hangend"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "220 V aanwezig?"
+msgstr "220 V aanwezig?"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "facturatie"
+msgstr "facturatie"
+
+#. module: neopaul_project
+#: field:account.payment.term,sales_conditions:0
+msgid "Sales Conditiones"
+msgstr "Verkoopsvoorwaarden"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,contact_address_id:0
+#: field:neopaul.project.design.voucher,contact_address_id:0
+#: field:project.project,contact_id:0
+msgid "Contact 1"
+msgstr "Contact 1"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,contact2_address_id:0
+#: field:neopaul.project.design.voucher,contact2_address_id:0
+#: field:project.project,contact2_id:0
+msgid "Contact 2"
+msgstr "Contact 2"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "in regie"
+msgstr "in regie"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Voor akkord :"
+msgstr "Voor akkoord :"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:337
+#, python-format
+msgid "A calculation voucher already exists for this design voucher"
+msgstr "Er bestaat reeds een calculatiebon voor deze ontwerpbon"
+
+#. module: neopaul_project
+#: field:project.project,existing_commercials_2:0
+#: field:project.project,existing_commercials_2_text:0
+msgid "Sign to take away ?"
+msgstr "Bestaande reclame af te nemen ?"
+
+#. module: neopaul_project
+#: field:project.project,amount_quote:0 field:project.project,amount_quoted:0
+msgid "Quotation"
+msgstr "Offerte"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Op voorhand te leggen?"
+msgstr "Op voorhand te leggen?"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Hoogachtend,"
+msgstr "Hoogachtend,"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Voor vergeefse verplaatsingen door factoren extern aan Acryl-neon "
+"bvba, wordt er een meerprijs forfait berekend"
+msgstr ""
+"Voor vergeefse verplaatsingen door factoren extern aan Acryl-neon "
+"bvba, wordt er een meerprijs forfait berekend"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "Datum Indienen Dossier"
+msgstr "Datum Indienen Dossier"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "5 jaar op constructiefouten"
+msgstr "5 jaar op constructiefouten"
+
+#. module: neopaul_project
+#: field:project.project,surface_5:0
+msgid "Surface color ?"
+msgstr "Kleur van de gevel ?"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Sales"
+msgstr "Verkoop"
+
+#. module: neopaul_project
+#: view:neopaul.project.calculation.voucher:0 view:neopaul.project.design:0
+#: view:neopaul.project.design.voucher:0
+msgid "General"
+msgstr "Algemeen"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "prijzen gelden excl. 21 % BTW    ( geldigheidsduur offerte 2 maanden )"
+msgstr "prijzen gelden excl. 21 % BTW    ( geldigheidsduur offerte 2 maanden )"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Colors"
+msgstr "Kleuren"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:neopaul.placement.voucher,state:0
+#: selection:neopaul.production.order,state:0
+#: selection:neopaul.project.calculation.voucher,state:0
+#: selection:neopaul.project.design,state:0
+#: selection:neopaul.project.design.voucher,state:0
+#: selection:project.project,neopaul_stage:0
+msgid "Done"
+msgstr "Gedaan"
+
+#. module: neopaul_project
+#: view:neopaul.production.order:0
+msgid "Create Placement Voucher"
+msgstr "Maak een plaatsingsbon"
+
+#. module: neopaul_project
+#: selection:neopaul.production.order,state:0
+msgid "Validated"
+msgstr "Gevalideerd"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.production.order:0
+msgid "accountmanager"
+msgstr "accountmanager"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "U dankend voor het vertrouwen, verblijven wij,"
+msgstr "U dankend voor het vertrouwen, verblijven wij,"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_prodorder_po
+#: view:neopaul.production.order:0
+#: field:neopaul.production.order,purchase_order_ids:0
+msgid "Purchase Orders"
+msgstr "Inkooporders"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+msgid "Soort Gevel"
+msgstr "Soort Gevel"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0
+msgid "Te plaatsen – te leveren items"
+msgstr "Te plaatsen – te leveren items"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "E-mail"
+msgstr "E-mail"
+
+#. module: neopaul_project
+#: field:project.project,cabling_requirements_3:0
+#: field:project.project,cabling_requirements_3_text:0
+msgid "Place available for Transformator ?"
+msgstr "Plaats voor transformator beschikbaar ?"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Telefoon / gsm"
+msgstr "Telefoon / gsm"
+
+#. module: neopaul_project
+#: field:project.project,deadline_date_type:0
+msgid "Deadline Type"
+msgstr "Deadline Type"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "openingsuren"
+msgstr "openingsuren"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:752
+#, python-format
+msgid "Unable to create placement voucher"
+msgstr "Kan geen plaatsingsbon maken"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Aanpassingen nadien worden apart aangerekend."
+msgstr "Aanpassingen nadien worden apart aangerekend."
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Date Ordered"
+msgstr "Datum offerte"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,calc_voucher_line_ids:0
+msgid "Lines"
+msgstr "Lijnen"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "Openingsdatum winkel"
+msgstr "Openingsdatum winkel"
+
+#. module: neopaul_project
+#: view:neopaul.production.order.item:0
+msgid "Item"
+msgstr "Item"
+
+#. module: neopaul_project
+#: field:project.project,color_1:0
+msgid "Constuctions Color"
+msgstr "Kleur van de reclame"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Order"
+msgstr "Order"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_res_users
+msgid "Users"
+msgstr "Gebruikers"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "volgens eenheidsprijzen"
+msgstr "volgens eenheidsprijzen"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "tijdschakelaar :"
+msgstr "tijdschakelaar :"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Geladen"
+msgstr "Geladen"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Elke LED installatie dient te worden voorzien van een schemerschakelaar. "
+" Bij te hoge temperaturen kunnen LED's beschadigd geraken."
+msgstr ""
+"Elke LED installatie dient te worden voorzien van een schemerschakelaar. "
+" Bij te hoge temperaturen kunnen LED's beschadigd geraken."
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Existing Sign"
+msgstr "Bestaande reclame"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "btw-nr"
+msgstr "btw-nr"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "volgens offerte"
+msgstr "volgens offerte"
+
+#. module: neopaul_project
+#: view:neopaul.project.calculation.voucher:0
+#: field:neopaul.project.calculation.voucher,sale_order_id:0
+msgid "Offer"
+msgstr "Offer"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Type verlichting"
+msgstr "Type verlichting"
+
+#. module: neopaul_project
+#: field:project.project,existing_commercials_3:0
+#: field:project.project,existing_commercials_3_text:0
+msgid "Sign to stock ?"
+msgstr "Bestaande reclame in stock nemen ?"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_placement_voucher
+msgid "neopaul.placement.voucher"
+msgstr "neopaul.placement.voucher"
+
+#. module: neopaul_project
+#: field:neopaul.placement.voucher,delivery_id:0
+#: field:neopaul.project.calculation.voucher,delivery_address_id:0
+#: field:neopaul.project.design.voucher,delivery_address_id:0
+#: field:project.project,delivery_address_id:0
+msgid "Delivery Address"
+msgstr "Leveringsadres"
+
+#. module: neopaul_project
+#: view:neopaul.placement.voucher:0 view:neopaul.production.order:0
+msgid "Reset"
+msgstr "Reset"
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_production_order
+#: field:neopaul.placement.voucher,production_order_id:0
+#: view:neopaul.production.order:0
+#: view::view.neopaul_project.form0
+#: field:neopaul.production.order.item,production_order_id:0
+#: field:neopaul.production.order.packing,production_order_id:0
+#: field:purchase.order,production_order_id:0
+msgid "Production Order"
+msgstr "Productie Order"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Site Information"
+msgstr "Site informatie"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_purchase_order
+msgid "Purchase Order"
+msgstr "Inkooporder"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_sale_order_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_project_project
+#: model:ir.model,name:neopaul_project.model_project_project
+#: field:neopaul.placement.voucher,project_id:0
+#: field:neopaul.production.order,project_id:0
+#: report:neopaul.project.calculation.voucher:0 view:neopaul.project.create:0
+#: report:neopaul.project.design.voucher:0
+#: field:neopaul.project.design.voucher,project_id:0
+#: report:neopaul.project.project:0 view:project.project:0
+msgid "Project"
+msgstr "Project"
+
+#. module: neopaul_project
+#: field:neopaul.project.design.voucher,facade_type:0
+msgid "Facade Type"
+msgstr "Facade Type"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.paper:0
+msgid "Net Total :"
+msgstr "Totaal netto :"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "PLAATSINGBON"
+msgstr "PLAATSINGBON"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Kleur achtergrond?"
+msgstr "Kleur achtergrond?"
+
+#. module: neopaul_project
+#: model:ir.actions.report.xml,name:neopaul_project.report_neopaul_project_sale_order_paper
+msgid "Quote / Order (Paper)"
+msgstr "Offerte / Order (op papier)"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "50 % bij bestelling, saldo netto contant bij facturatie."
+msgstr "50 % bij bestelling, saldo netto contant bij facturatie."
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "simulatietekening"
+msgstr "simulatietekening"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Inkooporderregel"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"Wij danken u voor  de interesse die u betoont in de diverse diensten van "
+"Neopaul  Acryl - neon, ontwerp, productie en installatiefirma."
+msgstr ""
+"Wij danken u voor  de interesse die u betoont in de diverse diensten van "
+"Neopaul  Acryl - neon, ontwerp, productie en installatiefirma."
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "vergunningsaanvraag"
+msgstr "vergunningsaanvraag"
+
+#. module: neopaul_project
+#: field:neopaul.project.calculation.voucher,has_commision:0
+msgid "Commission"
+msgstr "Commissie"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "bekabeling"
+msgstr "bekabeling"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o hoge kwaliteit SAMSUNG leds"
+msgstr "o hoge kwaliteit SAMSUNG leds"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "aard gevel / wand"
+msgstr "aard gevel / wand"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:574
+#, python-format
+msgid "Pricelist Error"
+msgstr "Fout in prijslijst"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "In Design"
+msgstr "In ontwerp"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Afnemen?"
+msgstr "Afnemen?"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "e-mail"
+msgstr "e-mail"
+
+#. module: neopaul_project
+#: view:account.payment.term:0
+msgid "Sales Conditions"
+msgstr "Verkoopsvoorwaarden"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Te stockeren"
+msgstr "Te stockeren"
+
+#. module: neopaul_project
+#: selection:neopaul.project.design,state:0
+msgid "Accepted"
+msgstr "Geaccepteerd"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.action_neopaul_project_calculation_voucher
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_project_calculation_voucher
+#: model:ir.ui.menu,name:neopaul_project.menu_neopaul_project_calculation_voucher
+#: view:neopaul.project.calculation.voucher:0
+#: view:project.project:0
+msgid "Calculation Vouchers"
+msgstr "Calculatiebonnen"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_production_order
+msgid "neopaul.production.order"
+msgstr "neopaul.production.order"
+
+#. module: neopaul_project
+#: model:ir.actions.act_window,name:neopaul_project.act_neopaul_partner_projet
+#: model:ir.actions.act_window,name:neopaul_project.action_neopaul_project
+#: model:ir.ui.menu,name:neopaul_project.menu_neopaul_project
+#: view:project.project:0
+msgid "Projects"
+msgstr "Projecten"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Postnr-gemeente"
+msgstr "Postnr-gemeente"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Straat"
+msgstr "Straat"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "te factureren bedrag"
+msgstr "te factureren bedrag"
+
+#. module: neopaul_project
+#: view:neopaul.production.order.packing:0
+msgid "packing Lists"
+msgstr "paklijst"
+
+#. module: neopaul_project
+#: field:project.project,cabling_requirements_2:0
+#: field:project.project,cabling_requirements_2_text:0
+msgid "Cable making invisible ?"
+msgstr "Kabels onzichtbaar wegwerken ?"
+
+#. module: neopaul_project
+#: field:neopaul.project.design,image:0
+msgid "Image"
+msgstr "Beeld"
+
+#. module: neopaul_project
+#: field:project.project,lighting_type:0
+msgid "Lighting Type"
+msgstr "Type verlichting"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.production.order:0
+msgid "Beschrijving"
+msgstr "Beschrijving"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:523
+#: code:addons/neopaul_project/neopaul_project.py:529
+#, python-format
+msgid "Please use the \"Generate Calculation Voucher\" button"
+msgstr "Gebruik de 'maak calculatiebon' knop aub."
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Salesman"
+msgstr "Verkoper"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.production.order:0
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Onderwerp"
+msgstr "Onderwerp"
+
+#. module: neopaul_project
+#: selection:neopaul.production.order.packing,quality_checked:0
+#: selection:purchase.order,quality_checked:0
+msgid "No"
+msgstr "Nee"
+
+#. module: neopaul_project
+#: selection:neopaul.project.design,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Gevelreclame"
+msgstr "Gevelreclame"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Klant :"
+msgstr "Klant :"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid ""
+"lichtcellen worden bij installatie op een gemiddelde waarde ingesteld. "
+"handleiding voor aanpassen van deze waarde wordt bij installatie meegeleverd "
+"en uitgelegd."
+msgstr ""
+"lichtcellen worden bij installatie op een gemiddelde waarde ingesteld. "
+"handleiding voor aanpassen van deze waarde wordt bij installatie meegeleverd "
+"en uitgelegd."
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "Belangrijke informatie"
+msgstr "Belangrijke informatie"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "bedrijfsnaam"
+msgstr "bedrijfsnaam"
+
+#. module: neopaul_project
+#: selection:neopaul.project.calculation.voucher,foreseen_placement_date_type:0
+#: selection:project.project,date_deadline_type:0
+#: selection:project.project,deadline_date_type:0
+msgid "Variable"
+msgstr "Variabel"
+
+#. module: neopaul_project
+#: selection:neopaul.project.calculation.voucher,foreseen_placement_date_type:0
+#: selection:project.project,date_deadline_type:0
+#: selection:project.project,deadline_date_type:0
+msgid "This week"
+msgstr "In deze week"
+
+#. module: neopaul_project
+#: selection:neopaul.project.calculation.voucher,foreseen_placement_date_type:0
+#: selection:project.project,date_deadline_type:0
+#: selection:project.project,deadline_date_type:0
+msgid "To discuss with customer"
+msgstr "In overleg met werfleider"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "winkel/wandelstraat"
+msgstr "winkel/wandelstraat"
+
+#. module: neopaul_project
+#: field:res.company,so_legal_notice1:0
+msgid "Neopaul Legal Notice 1"
+msgstr "Neopaul Legal Notice 1"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+msgid "Sfeer"
+msgstr "Sfeer"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "€ 350       (ja/neen)"
+msgstr "€ 350       (ja/neen)"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:548
+#, python-format
+msgid "Customer VAT Error"
+msgstr "Klant BTWnummer fout"
+
+#. module: neopaul_project
+#: selection:project.project,date_deadline_type:0
+msgid "To Discuss With Customer"
+msgstr "In overleg met de werfleider"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Parking"
+msgstr "Parking"
+
+#. module: neopaul_project
+#: view:neopaul.production.order:0
+msgid "Close"
+msgstr "Gesloten"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "o alle hoogspanningskabels zijn voorzien van een 100% siliconemantel"
+msgstr "o alle hoogspanningskabels zijn voorzien van een 100% siliconemantel"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Vrijstaande reclame"
+msgstr "Vrijstaande reclame"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "kleur gevel"
+msgstr "kleur gevel"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_production_order_item
+msgid "neopaul.production.order.item"
+msgstr "neopaul.production.order.item"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "met vriendelijke groeten,"
+msgstr "met vriendelijke groeten,"
+
+#. module: neopaul_project
+#: sql_constraint:account.analytic.account:0
+msgid "Name must be unique"
+msgstr "Naam moet uniek zijn"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_neopaul_project_design
+msgid "Project Design"
+msgstr "Project Ontwerp"
+
+#. module: neopaul_project
+#: field:project.project,sale_tender_id:0
+msgid "Sale Tender"
+msgstr "Verkoopstender"
+
+#. module: neopaul_project
+#: model:ir.ui.menu,name:neopaul_project.menu_neopaul_production
+msgid "Production"
+msgstr "Productie"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Wommelgem,"
+msgstr "Wommelgem,"
+
+#. module: neopaul_project
+#: view:neopaul.production.order.item:0
+#: field:neopaul.production.order.item,description:0
+#: view:neopaul.project.calculation.voucher:0
+#: view:neopaul.project.calculation.voucher.line:0
+#: view:neopaul.project.design:0 view:neopaul.project.design.voucher:0
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+#: view:project.project:0
+msgid "Description"
+msgstr "Beschrijving"
+
+#. module: neopaul_project
+#: field:neopaul.project.design.voucher,date_preferred:0
+#: field:project.project,date_preferred:0
+msgid "Preferred Date"
+msgstr "Voorkeursdatum"
+
+#. module: neopaul_project
+#: report:neopaul.project.design.voucher:0
+msgid "Klantinfo"
+msgstr "Klantinfo"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "plaatsingshoogte"
+msgstr "plaatsingshoogte"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "Project Created"
+msgstr "Project aangemaakt"
+
+#. module: neopaul_project
+#: field:neopaul.placement.voucher,customer_id:0
+#: field:neopaul.production.order,customer_id:0
+#: field:neopaul.project.calculation.voucher,customer_id:0
+#: field:neopaul.project.create,partner_id:0
+#: field:neopaul.project.design.voucher,customer_id:0
+msgid "Customer"
+msgstr "Klant"
+
+#. module: neopaul_project
+#: field:project.project,amount_advance:0
+msgid "Advance"
+msgstr "Voorshot"
+
+#. module: neopaul_project
+#: report:neopaul.project.project:0
+msgid "Te plaatsen–te leveren items"
+msgstr "Te plaatsen–te leveren items"
+
+#. module: neopaul_project
+#: view:project.project:0
+#: selection:project.project,neopaul_stage:0
+msgid "Waiting Computation"
+msgstr "Wachten op calculatie"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.project:0
+msgid "Parkeermogelijkheden"
+msgstr "Parkeermogelijkheden"
+
+#. module: neopaul_project
+#: view:neopaul.production.order.packing:0
+msgid "packing List"
+msgstr "paklijst"
+
+#. module: neopaul_project
+#: view:project.project:0
+msgid "Project Infos"
+msgstr "Project Info"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "optioneel :"
+msgstr "optioneel :"
+
+#. module: neopaul_project
+#: code:addons/neopaul_project/neopaul_project.py:612
+#, python-format
+msgid "Unable to create new offer"
+msgstr "Kan geen nieuwe offerte aanmaken"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "( waarborgen exclusief verplaatsingskosten en hoogwerkermateriaal )"
+msgstr "( waarborgen exclusief verplaatsingskosten en hoogwerkermateriaal )"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0 report:neopaul.project.project:0
+msgid "postnr-gemeente"
+msgstr "postnr-gemeente"
+
+#. module: neopaul_project
+#: report:neopaul.placement.voucher:0
+msgid "voeding"
+msgstr "voeding"
+
+#. module: neopaul_project
+#: model:ir.model,name:neopaul_project.model_account_payment_term
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Payment Term"
+msgstr "Betalingsconditie"
+
+#. module: neopaul_project
+#: report:neopaul.project.calculation.voucher:0
+#: report:neopaul.project.design.voucher:0 report:neopaul.project.project:0
+msgid "Deadline offerte"
+msgstr "Deadline offerte"
+
+#. module: neopaul_project
+#: report:neopaul.project.so.email:0 report:neopaul.project.so.email.nototal:0
+#: report:neopaul.project.so.paper:0 report:neopaul.project.so.paper.nototal:0
+msgid "Quotation N°"
+msgstr "Offerte nr. "
+
+#. module: neopaul_project
+#: report:neopaul.production.order:0
+msgid "Orders"
+msgstr "Orders"
+
+#. module: project_sale_order
+#: model:ir.actions.act_window,name:project_sale_order.neopaul_project_sale_ordercreate
+msgid "Create Offer"
+msgstr "Offerte Aanmaken"
+
+#. module: purchase
+#: view:website:purchase.report_purchaseorder
+#: report:purchase.order:0
+#: report:purchase.quotation:0
+msgid "Request for Quotation N°"
+msgstr "Bestelling"
+
+#. module: purchase
+#: view:purchase.order:0
+msgid "Request for Quotation "
+msgstr "Bestelling"
+
+#. module: purchase
+#: selection:purchase.order,state:0
+msgid "RFQ"
+msgstr "Offerteaanvraag"
+
+#. module: purchase
+#: report:purchase.quotation:0
+msgid "Request for Quotation :"
+msgstr "Bestelling :"
+
+#. module: purchase
+#: report:purchase.quotation:0
+msgid "Expected Delivery address:"
+msgstr "Leveradres"
+
+#. module: sale
+#: report:sale.order:0
+msgid "Date Ordered"
+msgstr "Datum Offerte"
+
+#. module: account
+#: model:account.account.type,name:account.conf_account_type_tax
+#: report:account.invoice:0
+#: field:account.invoice,amount_tax:0
+#: report:account.journal.period.print.sale.purchase:0
+#: field:account.move.line,account_tax_id:0
+#: view:account.tax:0
+#: model:ir.model,name:account.model_account_tax
+msgid "Tax"
+msgstr "BTW"
+

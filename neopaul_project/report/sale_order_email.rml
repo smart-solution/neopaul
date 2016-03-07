@@ -1,0 +1,726 @@
+<?xml version="1.0"?>
+<document filename="Sale Order.pdf">
+  <template title="Sale Order" author="OpenERP S.A.(sales@openerp.com)" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="15.0" y1="42.0" width="539" height="758"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="3,-1" stop="3,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="3,-1" stop="3,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table4">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="4,-1" stop="4,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="5,-1" stop="5,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table5">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <!--
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="4,-1" stop="4,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="5,-1" stop="5,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="6,-1" stop="6,-1"/>
+      -->
+    </blockTableStyle>
+    <blockTableStyle id="Table6">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="#ffffff" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBEFORE" colorName="#ffffff" start="0,1" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#ffffff" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#ffffff" start="0,2" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#ffffff" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,2" stop="1,2"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,2" stop="2,2"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table7">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table8">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="4,-1" stop="4,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" start="5,-1" stop="5,-1"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="Standard" fontName="Helvetica"/>
+    <paraStyle name="Text body" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="8.0" leading="10" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Table Contents" fontName="Helvetica"/>
+    <paraStyle name="Table Heading" fontName="Helvetica" alignment="CENTER"/>
+    <paraStyle name="Caption" fontName="Helvetica" fontSize="12.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica"/>
+    <paraStyle name="terp_header" fontName="Helvetica-Bold" fontSize="15.0" leading="19" alignment="LEFT" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_4" fontName="Helvetica" fontSize="4.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_8" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Bold_8" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Bold_9" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_tblheader_General" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_General_Centre" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="CENTER" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_Centre_8" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_tblheader_Details" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Footer" fontName="Helvetica"/>
+    <paraStyle name="Horizontal Line" fontName="Helvetica" fontSize="6.0" leading="8" spaceBefore="0.0" spaceAfter="14.0"/>
+    <paraStyle name="Heading 9" fontName="Helvetica-Bold" fontSize="75%" leading="NaN" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_General_Right" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="RIGHT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_Details_Centre" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_Details_Right" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_Right_8" fontName="Helvetica" fontSize="8.0" leading="10" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_header_Right" fontName="Helvetica-Bold" fontSize="15.0" leading="19" alignment="LEFT" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_header_Centre" fontName="Helvetica-Bold" fontSize="15.0" leading="19" alignment="CENTER" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_address" fontName="Helvetica" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Centre_9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Right_9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_1" fontName="Helvetica" fontSize="2.0" leading="3" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Right_9_Bold" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Italic" rightIndent="0.0" leftIndent="20.0" fontName="Helvetica-Oblique" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Preformatted Text" fontName="Helvetica" fontSize="10.0" leading="13" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Centre_9_Bold" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="neopaul_text_1" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="10.0"/>
+    <paraStyle name="neopaul_text_2" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="neopaul_text_1_r" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="0.0" spaceAfter="10.0"/>
+    <images/>
+  </stylesheet>
+  <story>
+      <para style="terp_default_8">[[ repeatIn(objects,'o') ]]</para>
+      <para style="terp_default_8">[[ setLang(o.partner_contact_id.lang) ]]</para>
+     <blockTable colWidths="265.0,51.0,225.0" style="Table1">
+      <tr>
+        <td>
+          <para style="terp_default_Bold_9">Leveringsadres :</para>
+      <para style="terp_default_9">[[ (o.partner_shipping_id and o.partner_shipping_id.title and o.partner_shipping_id.title.shortcut) or '' ]] [[ (o.partner_shipping_id and o.partner_shipping_id.name) or '' ]]</para>
+          <para style="terp_default_9">[[ o.partner_shipping_id and display_address(o.partner_shipping_id) ]]</para>
+          <para style="terp_default_9">
+            <font color="white"> </font>
+          </para>
+          <para style="terp_default_Bold_9">Facturatie adres :</para>
+          <para style="terp_default_9">[[ (o.partner_invoice_id and o.partner_invoice_id.title and o.partner_invoice_id.title.shortcut) or '' ]] [[ (o.partner_invoice_id and o.partner_invoice_id.name) or '' ]]</para>
+          <para style="terp_default_9">[[ o.partner_invoice_id and display_address(o.partner_invoice_id) ]] </para>
+          <para style="terp_default_9">TVA : [[ (o.partner_id and o.partner_id.vat) or removeParentNode('para') ]]</para>
+        </td>
+        <td>
+          <para style="terp_default_8">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="terp_default_9">[[ format(o.partner_contact_id.title.shortcut or "") ]] [[ o.partner_contact_id and o.partner_contact_id.name ]] </para>
+          <para style="terp_default_9">[[ o.partner_contact_id and display_address(o.partner_contact_id) ]] </para>
+          <para style="terp_default_9">
+
+            <font color="white"> </font>
+          </para>
+          <para style="terp_default_9">Tel. : [[ (o.partner_order_id and o.partner_order_id.phone) or removeParentNode('para') ]]</para>
+          <para style="terp_default_9">Fax : [[ (o.partner_order_id and o.partner_order_id.fax) or removeParentNode('para') ]]</para>
+          <para style="terp_default_9">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1_r">Wommelgem, [[ time.strftime('%d-%m-%y') ]]</para>
+      <para style="neopaul_text_1">Geachte  [[ format(o.partner_contact_id.title.name or "") ]] [[ o.partner_contact_id.last_name or ""]],</para>
+
+      <para style="neopaul_text_1">Wij danken u voor  de interesse die u betoont in de diverse diensten van Neopaul Acryl-Neon, ontwerp, productie en installatiefirma.
+      </para>
+      <para style="neopaul_text_1">In bijlage vindt u gedetailleerde info over uw lichtproject.</para>
+      <para style="neopaul_text_1">Indien u over enig project meer informatie verlangt, aarzel dan niet om ons telefonisch te contacteren op het centrale nummer 00 32 3 321 28 77, per fax 00 32 3 322 84 24 of per e-mail : info@neopaul.com</para>
+      <para style="neopaul_text_1">Hopend u hiermee van dienst te zijn geweest, en u dankend voor het vertrouwen, verblijven wij,</para>
+      <para style="neopaul_text_1">Hoogachtend,</para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1">voor Acryl–Neon bvba,</para>
+      <para style="neopaul_text_1">[[ o.user_id.name or "" ]]</para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1">PS : bezoek onze website : www.neopaul.com </para>
+  </story>
+  <story>
+  <pto>
+      <!--
+  <para style="terp_default_8">[[repeatIn(objects,'o')]]</para>
+  <para style="terp_default_8">[[ setLang(o.partner_id.lang) ]]</para>
+-->
+  <pto_header>
+    <blockTable colWidths="231.0,115.0,105.0,85.0" repeatRows="1" style="Table4">
+      <tr>
+        <td>
+          <para style="terp_tblheader_Details">Description</para>
+        </td>
+        <td>
+          <para style="terp_tblheader_Details_Right">Quantity</para>
+        </td>
+        <td>
+          <para style="terp_tblheader_Details_Right">Unit Price</para>
+        </td>
+        <td>
+          <para style="terp_tblheader_Details_Right">Price</para>
+        </td>
+      </tr>
+    </blockTable>
+  </pto_header>
+    <para style="terp_default_9">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="265.0,51.0,225.0" style="Table1">
+      <tr>
+        <td>
+          <para style="terp_default_Bold_9">Leveringsadres :</para>
+	  <para style="terp_default_9">[[ (o.partner_shipping_id and o.partner_shipping_id.title and o.partner_shipping_id.title.name) or '' ]] [[ (o.partner_shipping_id and o.partner_shipping_id.name) or '' ]]</para>
+          <para style="terp_default_9">[[ o.partner_shipping_id and display_address(o.partner_shipping_id) ]]</para>
+          <para style="terp_default_9">
+            <font color="white"> </font>
+          </para>
+          <para style="terp_default_Bold_9">Facturatie adres :</para>
+          <para style="terp_default_9">[[ (o.partner_invoice_id and o.partner_invoice_id.title and o.partner_invoice_id.title.name) or '' ]] [[ (o.partner_invoice_id and o.partner_invoice_id.name) or '' ]]</para>
+          <para style="terp_default_9">[[ o.partner_invoice_id and display_address(o.partner_invoice_id) ]] </para>
+          <para style="terp_default_9">TVA : [[ (o.partner_id and o.partner_id.vat) or removeParentNode('para') ]]</para>
+        </td>
+        <td>
+          <para style="terp_default_8">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="terp_default_9">[[ o.partner_contact_id and o.partner_contact_id.name ]] </para>
+          <para style="terp_default_9">[[ o.partner_contact_id and display_address(o.partner_contact_id) ]] </para>
+          <para style="terp_default_9">
+	
+            <font color="white"> </font>
+          </para>
+          <para style="terp_default_9">Tel. : [[ (o.partner_order_id and o.partner_order_id.phone) or removeParentNode('para') ]]</para>
+          <para style="terp_default_9">Fax : [[ (o.partner_order_id and o.partner_order_id.fax) or removeParentNode('para') ]]</para>
+          <para style="terp_default_9">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <para style="terp_header">[[ (o.state&lt;&gt;'draft' and o.state&lt;&gt;'sent') and removeParentNode('para') ]] Offerte nr. [[ o.name ]]</para>
+    <para style="terp_header">[[ (o.state=='draft' or o.state=='sent') and removeParentNode('para') ]] Order nr. [[ o.name ]]</para>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+    <para style="neopaul_text_1">Naar aanleiding van uw prijsaanvraag, waarvoor onze dank,hebben wij het  genoegen  u overeenkomstig onze Algemene Verkoops -en Aannemingsvoorwaarden, onze prijsofferte voor levering en plaatsing van onderstaande aan te bieden :</para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+      <para style="neopaul_text_1"> </para>
+    <blockTable colWidths="132.0,134.0,135.0,135.0" style="Table7">
+      <tr>
+        <td>
+          <para style="terp_tblheader_General_Centre">Uw referentie </para>
+        </td>
+        <td>
+          <para style="terp_tblheader_General_Centre">[[ (o.state&lt;&gt;'draft' and o.state&lt;&gt;'sent') and removeParentNode('para') ]] Datum offerte</para>
+          <para style="terp_tblheader_General_Centre">[[ (o.state=='draft' or o.state=='sent') and removeParentNode('para') ]] Besteldatum</para>
+        </td>
+        <td>
+          <para style="terp_tblheader_General_Centre">Contactpersoon</para>
+        </td>
+        <td>
+          <para style="terp_tblheader_General_Centre">Betalingsconditie</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="132.0,134.0,135.0,135.0" style="Table7">
+      <tr>
+        <td>
+          <para style="terp_default_Centre_8">[[ o.client_order_ref ]]</para>
+        </td>
+        <td>
+          <para style="terp_default_Centre_8">[[ formatLang(o.date_order,date = True) ]]</para>
+        </td>
+        <td>
+          <para style="terp_default_Centre_8">[[ (o.user_id and o.user_id.name) or '' ]]</para>
+        </td>
+        <td>
+          <para style="terp_default_Centre_8">[[ (o.payment_term and o.payment_term.name) or '' ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="231.0,115.0,105.0,85.0" repeatRows="1" style="Table4">
+      <tr>
+        <td>
+          <para style="terp_tblheader_Details">Description</para>
+        </td>
+        <td>
+          <para style="terp_tblheader_Details_Right">Quantity</para>
+        </td>
+        <td>
+          <para style="terp_tblheader_Details_Right">Unit Price</para>
+        </td>
+        <!--
+        <td>
+          <para style="terp_tblheader_Details_Centre">Disc.(%)</para>
+        </td>
+        -->
+        <td>
+          <para style="terp_tblheader_Details_Right">Price</para>
+        </td>
+      </tr>
+    </blockTable>
+    <section>
+      <para style="terp_default_1">[[repeatIn(o.order_line,'line')]]</para>
+      <!--      <blockTable colWidths="180.0,70.0,80.0,70.0,50.0,85.0" style="Table5">-->
+      <blockTable colWidths="230.0,115.0,105.0,85.0" style="Table5">
+        <tr>
+          <td>
+            <para style="terp_default_9">[[ line.product_id.name ]] </para>
+          </td>
+          <td>
+            <para style="terp_default_Right_9">[[ formatLang(line.product_uos and line.product_uos_qty or line.product_uom_qty) ]] </para>
+          </td>
+          <td>
+            <para style="terp_default_Right_9">[[ formatLang(line.price_unit ) ]]</para>
+          </td>
+          <!--
+          <td>
+            <para style="terp_default_Centre_9">[[ formatLang(line.discount) ]]</para>
+          </td>
+          -->
+          <td>
+            <para style="terp_default_Right_9">[[ formatLang(line.price_subtotal, digits=get_digits(dp='Sale Price'), currency_obj=o.pricelist_id.currency_id) ]] </para>
+          </td>
+        </tr>
+      </blockTable>
+      <blockTable colWidths="535.0" style="Table5">
+        <tr>
+          <td>
+            <para style="terp_default_Italic">[[ format(line.name or removeParentNode('tr')) ]]</para>
+          </td>
+        </tr>
+      </blockTable>
+    </section>
+
+          <para style="terp_default_9">
+            <font color="white"> </font>
+          </para>
+          <para style="terp_default_9">
+            <font color="white"> </font>
+          </para>
+
+    <blockTable colWidths="381.0,60.0,93.0" style="Table6">
+      <tr>
+        <td>
+          <para style="terp_default_9">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="terp_default_9">Net Total :</para>
+        </td>
+        <td>
+          <para style="terp_default_Right_9">[[ formatLang(o.amount_untaxed, dp='Sale Price', currency_obj=o.pricelist_id.currency_id) ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+  </pto>
+    <!--    <para style="neopaul_text_2">[[ o.company_id.so_legal_notice1 ]]</para>-->
+    <!--<para style="terp_default_9">[[ format(o.note or '') ]]</para>-->
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+            <para style="neopaul_text_1">Prijzen gelden excl. BTW / geldigheidsduur offerte 4 weken</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table8">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">WAARBORG :</para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">5 jaar op constructiefouten</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"></para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">1 jaar op electrische onderdelen, (excl .TL lampen  )</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"></para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">2 jaar op LED verlichting, mits aanwezigheid van lichtsensor</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"></para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">( waarborgen exclusief verplaatsingskosten en hoogwerkermateriaal )</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">VOEDING :</para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">voedingsleiding 220 V + aarding, via de brandweerschakelaar tot aan de transformatoren en lichtreclame, ten laste van kliënt of in regie</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">LICHTCEL :</para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">lichtcellen worden bij installatie op een gemiddelde waarde ingesteld. handleiding voor aanpassen van deze waarde wordt bij installatie meegeleverd en uitgelegd.</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"></para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">Aanpassingen nadien worden apart aangerekend.</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"></para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">Elke LED installatie dient te worden voorzien van een schemerschakelaar.  Bij te hoge temperaturen kunnen LED's beschadigd geraken.</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">PLAATSING :</para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">Voor vergeefse verplaatsingen door factoren extern aan Acryl-Neon bvba, wordt er een meerprijs forfait berekend</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"></para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">De goederen blijven tevens contant betaalbaar ook indien deze door factoren extern aan Acryl-Neon bvba. niet geplaatst kunnen worden.</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="167,366" style="Table7">
+      <tr>
+        <td>
+            <para style="neopaul_text_1">LEVERINGSTERMIJN :</para>
+        </td>
+        <td>
+            <para style="neopaul_text_1">+/- 6 weken na voorlegging vergunning en aanlevering van alle artwork ( EPS files, kleurreferenties ..)</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">gemeentelijke vergunning</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_2">Alle op de openbare weg aangebrachte lichtreklames en uithangborden dienen het onderwerp uit te maken van een studie vanwege de bevoegde besturen op basis van de ter plaatse geldende gemeente - reglementeringen.  </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_2">Aanvraag om toelating tot het plaatsen van buitenreklamen aan de betrokken instanties dient gedaan te worden door de klant in akkoord met de eigenaar van het gebouw of grond. Acryl-Neon bvba (Neopaul)  kan echter instaan voor het opmaken van de betreffende gevelplans en bijgaande formulieren op naam en voor rekening van haar klant. </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+            <para style="neopaul_text_2">De bvba Acryl-Neon (Neopaul ) heeft echter geen inspraak in de beslissingen hieromtrent en kan niet verantwoordelijk gesteld worden voor producties waar geen vergunning voor is.</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">U dankend voor het vertrouwen, verblijven wij,</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">met vriendelijke groeten,</para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">voor Acryl–Neon bvba,</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white">.</font>
+    </para>
+    <para style="terp_default_8">
+      <font color="white">.</font>
+    </para>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">[[ o.user_id.name or "" ]]</para>
+        </td>
+      </tr>
+    </blockTable>
+  </story>
+
+
+
+
+
+  <story>
+    <blockTable colWidths="100.0,433" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">Voor akkoord :</para>
+        </td>
+        <td>
+          <para style="neopaul_text_1"></para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="100.0,433" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">Klant :</para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">........................................................</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="100.0,433" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1">BTW nummer :</para>
+        </td>
+        <td>
+          <para style="neopaul_text_1">........................................................</para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="533.0" style="Table7">
+      <tr>
+        <td>
+          <para style="neopaul_text_1"> </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+  </story>
+
+  <story>
+           <para style="terp_default_4">[[ format(o.payment_term and o.payment_term.sales_conditions) or removeParentNode('story') ]]
+           </para>
+
+  </story>
+
+</document>

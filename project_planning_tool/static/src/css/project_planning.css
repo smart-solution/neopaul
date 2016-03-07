@@ -1,0 +1,240 @@
+.datetime_header{
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #cacaca;
+    padding-left: 2px;
+    background-color: #ededed;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#dedede));
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #dedede);
+    background-image: -moz-linear-gradient(top, #fcfcfc, #dedede);
+    background-image: -ms-linear-gradient(top, #fcfcfc, #dedede);
+    background-image: -o-linear-gradient(top, #fcfcfc, #dedede);
+    background-image: linear-gradient(to bottom, #fcfcfc, #dedede);
+    height:24px;
+}
+
+.back_img{
+    width: 55px;
+    margin-top: -15px;
+    height: 55px;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.forward_img{
+    width: 55px;
+    margin-top: -15px;
+    height: 55px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.datepicker_date_start,.datepicker_date_to{
+    margin-left: -7px;
+    margin-top: -5px;
+    height: 21px;
+}
+
+.project_data{
+    width:100%;
+    height:100%;
+    background: url(/web/static/src/img/form_sheetbg.png);
+}
+
+.week_data_div{
+    width: 100%;
+}
+.user_header{
+    height: 21px;
+    background-color: #414141;
+    background-color: #454343;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#646060), to(#262626));
+    background-image: -webkit-linear-gradient(top, #646060, #262626);
+    background-image: -moz-linear-gradient(top, #646060, #262626);
+    background-image: -ms-linear-gradient(top, #646060, #262626);
+    background-image: -o-linear-gradient(top, #646060, #262626);
+    background-image: linear-gradient(to bottom, #646060, #262626);
+    color: white;
+    font-size:15px;
+}
+
+.week_header{
+    width: 53%;
+    position: relative;
+    border-bottom: 1px solid #cacaca;
+    padding-left: 2px;
+    background-color: #414141;
+    background-color: #454343;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#646060), to(#262626));
+    background-image: -webkit-linear-gradient(top, #646060, #262626);
+    background-image: -moz-linear-gradient(top, #646060, #262626);
+    background-image: -ms-linear-gradient(top, #646060, #262626);
+    background-image: -o-linear-gradient(top, #646060, #262626);
+    background-image: linear-gradient(to bottom, #646060, #262626);
+    color: white;
+    border-top-right-radius: 40px;
+}
+
+.oe_project_task_record{
+    width: 50%;
+    cursor: move;
+    position: relative;
+    display: block;
+    min-height: 20px;
+    margin: 0;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #fff1c7;
+    border: 2px solid grey;
+    min-height: 39px;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    -webkit-box-shadow:  0px 17px 2px rgba(0,0,0,0.3) inset, 0px 1px 2px rgba(0,0,0,0.1);
+       -moz-box-shadow:  0px 17px 2px rgba(0,0,0,0.3) inset, 0px 1px 2px rgba(0,0,0,0.1);
+        -ms-box-shadow:  0px 17px 2px rgba(0,0,0,0.3) inset, 0px 1px 2px rgba(0,0,0,0.1);
+         -o-box-shadow:  0px 17px 2px rgba(0,0,0,0.3) inset, 0px 1px 2px rgba(0,0,0,0.1);
+            box-shadow:  0px 17px 2px rgba(0,0,0,0.3) inset, 0px 1px 2px rgba(0,0,0,0.1);
+}
+
+.oe_kanban_column_view{
+    width:30%;
+    border-top: 1px solid lightgrey;
+    border-right: 1px solid lightgray;
+}
+.day_label_td{
+    border-top: 1px solid lightgrey;
+}
+
+.oe_project_task_record:not(.ui-sortable):hover{
+      border: 1px solid #7c7bad;
+  -moz-box-shadow: 0 0 4px #7c7bad;
+  -webkit-box-shadow: 0 0 4px #7c7bad;
+  -box-shadow: 0 0 4px #7c7bad;
+}
+.day_label{
+    line-height: 25px;
+    background: #e6e6e6;
+    color: #5a5a5a;
+    font-weight: bold;
+    position: relative; 
+    top: -1px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    height:100%;
+    width: 50%;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.oe_toggel{
+    display : none;
+}
+
+.oe_fold{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.openerp .project_data .oe_dropdown_menu {
+  left: 0;
+  top: 28px;
+  min-width: 160px;
+  padding: 2px;
+}
+.openerp .project_data .oe_dropdown_kanban > span {
+  visibility: hidden;
+}
+.openerp .project_data .oe_kanban_colorpicker {
+  white-space: nowrap;
+  list-style-type:none;
+  margin-left: -46px;
+}
+.openerp .project_data .oe_kanban_colorpicker li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.openerp .project_data .oe_kanban_colorpicker li a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid white;
+}
+.openerp .project_data .oe_kanban_colorpicker li a:hover {
+  border: 1px solid gray !important;
+}
+.openerp .project_data .oe_kanban_color_0 {
+  background-color: white;
+  color: #5a5a5a;
+}
+.openerp .project_data .oe_kanban_color_1 {
+  background-color: #cccccc;
+  color: #424242;
+}
+.openerp .project_data .oe_kanban_color_2 {
+  background-color: #ffc7c7;
+  color: #7a3737;
+}
+.openerp .project_data .oe_kanban_color_3 {
+  background-color: #fff1c7;
+  color: #756832;
+}
+.openerp .project_data .oe_kanban_color_4 {
+  background-color: #e3ffc7;
+  color: #5d6937;
+}
+.openerp .project_data .oe_kanban_color_5 {
+  background-color: #c7ffd5;
+  color: #1a7759;
+}
+.openerp .project_data .oe_kanban_color_6 {
+  background-color: #c7ffff;
+  color: #1a5d83;
+}
+.openerp .project_data .oe_kanban_color_7 {
+  background-color: #c7d5ff;
+  color: #3b3e75;
+}
+.openerp .project_data .oe_kanban_color_8 {
+  background-color: #e3c7ff;
+  color: #4c3668;
+}
+.openerp .project_data .oe_kanban_color_9 {
+  background-color: #ffc7f1;
+  color: #6d2c70;
+}
+.portlet {
+    margin: 0 1em 1em 0;
+    padding: 0.3em;
+  }
+  .portlet-header {
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+  .oe_dropdown_toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+  .portlet-content {
+    padding: 0.4em;
+  }
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+  }
+.openerp .oe_form_field_datetime {
+  white-space: nowrap;
+}
+.openerp .oe_user_menu{
+    margin-top: -13px;
+}
+

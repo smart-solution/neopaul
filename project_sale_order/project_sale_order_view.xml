@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+    <record model="ir.ui.view" id="view_project_sale_order_create">
+        <field name="name">view.project.sale.order.create</field>
+        <field name="model">project.sale.order.create</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="New Offerte">
+                <separator string="Offer" colspan="4"/>
+                <label string="Maak een offerte voor volgend project : "/>
+                <field name="project_id" readonly="1" nolabel="1"/>
+                <label string="Gebruik deze offerte als template : "/>
+                <field name="order_id" readonly="0" nolabel="1"/>
+                <button name="so_create" string="Maak Offerte" type="object" colspan="4"/>
+            </form>
+        </field>
+    </record>
+
+     <act_window id="neopaul_project_sale_ordercreate"
+            name="Create Offer"
+            res_model="project.sale.order.create" 
+            src_model="project.project"
+            view_id="view_project_sale_order_create"
+            view_mode="form" target="new" view_type="form"
+            context="{'default_project_id': active_id}"
+            />
+        
+
+<!--
+   <menuitem
+       icon="terp-project" id="project_sale_order_main_menu"
+       name="project_sale_order" sequence="0"
+       web_icon="images/project_sale_order.png"
+       web_icon_hover="images/project_sale_order-hover.png"/>
+
+    <menuitem name="Configuration" id="project_sale_order_configuration_menu" parent="module_main_menu"/>
+    <menuitem name="project_sale_order" id="module_menu" parent="module_main_menu"  sequence="5"/>
+
+-->
+   <!--
+       project_sale_order Views 
+   -->
+<!--
+    <record model="ir.ui.view" id="view_project_sale_order_tree">
+        <field name="name">view.project_sale_order.tree</field>
+        <field name="model">project_sale_order</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="project_sale_order">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_project_sale_order_form">
+        <field name="name">view.project_sale_order.form</field>
+        <field name="model">project_sale_order</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="project_sale_order">
+		<field name="name"/>
+		<field name="code"/>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_project_sale_order">
+        <field name="name">All project_sale_order</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project_sale_order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_project_sale_order_tree"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_project_sale_order_tree_view">
+        <field name="sequence">10</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_project_sale_order_tree"/>
+        <field name="act_window_id" ref="action_project_sale_order"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_project_sale_order_form_view">
+        <field name="sequence">20</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_project_sale_order_form"/>
+        <field name="act_window_id" ref="action_project_sale_order"/>
+    </record>
+
+    <menuitem name="All project_sale_order" id="menu_module" parent="module_menu" action="action_module" sequence="5"/>
+
+    <record model="ir.ui.view" id="view_campaign_proposition_segment_segmentation_form_inherit">
+        <field name="name">view.campaign.proposition.segment.segmentation.form</field>
+        <field name="model">dm.campaign.proposition</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="dm.view_campaign_proposition_form"/>        
+        <field name="arch" type="xml">
+            <xpath expr="/form/notebook/page/field[@name='segment_ids']/form/notebook" position="inside">
+                <page string="Extraction">
+                    <field name="segmentation_id" string="Segmentation"/>
+                    <field name="use_census"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+        <record id="view_product_search_nineit" model="ir.ui.view">
+            <field name="name">product.product.search.nineit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view" />
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <xpath expr="/search/field[@name='categ_id']" position='after'>
+                        <field name="nineit_sku"/>
+                        <field name="nineit_barcode"/>
+                        <field name="nineit_import_file_id" string="Supplier"/>
+                </xpath>
+            </field>
+        </record>
+
+    <act_window name="Ship Sale Orders"
+    res_model="sale.order"
+    src_model="project.project"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_project_sale_orders"
+    context="{'_id':active_id}"
+    domain="[('ship_id','=',active_id)]"
+    />
+
+-->
+
+
+    </data>
+</openerp>

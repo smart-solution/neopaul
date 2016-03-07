@@ -1,0 +1,616 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(612.0,792.0)" title="Placement Voucher" author="Fabian Semal (SmartSolution)" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="57.0" y1="57.0" width="498" height="678"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <!--
+      <lineStyle kind="LINEABOVE" colorName="#000000" thickness="0.5" start="0,0" stop="1,0"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" thickness="0.5" start="0,1" stop="1,1"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" thickness="0.5" start="0,2" stop="1,2"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" thickness="0.5" start="0,3" stop="1,3"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" thickness="0.5" start="0,4" stop="1,4"/>
+-->
+      <lineStyle kind="LINEABOVE" colorName="#e5e5e5" thickness="0.5" start="0,0" stop="1,45"/>
+      <lineStyle kind="LINEABOVE" colorName="#800000" thickness="2.0" start="0,15" stop="1,15"/>
+      <blockBackground colorName="#800000" start="0,0" stop="0,0"/>
+      <blockBackground colorName="#800000" start="0,1" stop="0,1"/>
+      <blockBackground colorName="#800000" start="0,2" stop="0,2"/>
+      <blockBackground colorName="#e5e5e5" start="0,3" stop="0,3"/>
+      <blockBackground colorName="#e5e5e5" start="0,4" stop="0,4"/>
+      <blockBackground colorName="#e5e5e5" start="0,5" stop="0,5"/>
+      <blockBackground colorName="#e5e5e5" start="0,6" stop="0,6"/>
+      <blockBackground colorName="#e5e5e5" start="0,7" stop="0,7"/>
+      <blockBackground colorName="#e5e5e5" start="0,7" stop="0,7"/>
+      <blockBackground colorName="#e5e5e5" start="0,8" stop="0,8"/>
+      <blockBackground colorName="#e5e5e5" start="0,9" stop="0,9"/>
+      <blockBackground colorName="#e5e5e5" start="0,10" stop="0,10"/>
+      <blockBackground colorName="#e5e5e5" start="0,11" stop="0,11"/>
+      <blockBackground colorName="#ec8c8c" start="0,12" stop="1,12"/>
+      <!--      <blockBackground colorName="#800000" start="0,15" stop="1,15"/>-->
+      <blockBackground colorName="#ec8c8c" start="0,17" stop="1,17"/>
+      <blockBackground colorName="#ec8c8c" start="0,21" stop="1,21"/>
+      <blockBackground colorName="#ec8c8c" start="0,26" stop="1,26"/>
+      <blockBackground colorName="#ec8c8c" start="0,30" stop="1,30"/>
+      <blockBackground colorName="#ec8c8c" start="0,33" stop="1,33"/>
+      <blockBackground colorName="#ec8c8c" start="0,37" stop="1,37"/>
+    </blockTableStyle>
+
+    <blockTableStyle id="Table_Items">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="#e5e5e5" thickness="0.5" start="0,0" stop="1,0"/>
+      <lineStyle kind="LINEABOVE" colorName="#e5e5e5" thickness="0.5" start="0,1" stop="1,1"/>
+    </blockTableStyle>
+
+    <blockTableStyle id="Table_Header">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="#000000" thickness="0.5" start="0,0" stop="3,0"/>
+      <blockBackground colorName="#cccccc" start="0,0" stop="0,0"/>
+    </blockTableStyle>
+
+    <blockTableStyle id="Table_Orders">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEABOVE" colorName="#e5e5e5" thickness="0.5" start="0,0" stop="3,0"/>
+    </blockTableStyle>
+
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+
+    <paraStyle name="P1" fontName="Helvetica-Bold" fontSize="6.0" leading="8" alignment="LEFT" textColor="#000000"/>
+    <paraStyle name="P2" fontName="Helvetica-Bold" fontSize="6.0" leading="8" alignment="LEFT" textColor="#000000"/>
+    <paraStyle name="P3" fontName="Helvetica-Bold" fontSize="6.0" leading="8" alignment="CENTER" textColor="#000000"/>
+    <paraStyle name="P4" fontName="Helvetica" fontSize="6.0" leading="8" alignment="LEFT" textColor="#000000"/>
+    <paraStyle name="P5" fontName="Helvetica" fontSize="6.0" leading="8" alignment="LEFT" textColor="#000000"/>
+    <paraStyle name="P6" fontName="Helvetica" fontSize="6.0" leading="8" alignment="CENTER" textColor="#000000"/>
+    <paraStyle name="P7" fontName="Helvetica" fontSize="6.0" leading="8" alignment="RIGHT" textColor="#000000"/>
+    <paraStyle name="P8" fontName="Helvetica-Bold" fontSize="6.0" leading="8" alignment="LEFT" textColor="#000000"/>
+    <paraStyle name="P8B" fontName="Helvetica-Bold" fontSize="6.0" leading="0" alignment="LEFT" textColor="#000000"/>
+    <paraStyle name="P9" fontName="Helvetica-Bold" fontSize="6.0" leading="8" alignment="LEFT" textColor="#ffffff"/>
+    <paraStyle name="P10" fontName="Helvetica" fontSize="6.0" leading="8"/>
+    <paraStyle name="P11" fontName="Helvetica" fontSize="6.0" leading="8" alignment="LEFT"/>
+    <paraStyle name="P12" fontName="Helvetica" fontSize="6.0" leading="8" alignment="LEFT" textColor="#000000"/>
+    <paraStyle name="P13" fontName="Helvetica" alignment="LEFT"/>
+    <paraStyle name="P14" fontName="Helvetica" fontSize="9.0" leading="11"/>
+    <paraStyle name="P15" fontName="Helvetica-Bold" fontSize="9.0" leading="11"/>
+    <paraStyle name="P16" fontName="Helvetica-Bold" fontSize="18.0" leading="22"/>
+    <paraStyle name="P17" fontName="Helvetica-Bold" fontSize="9.0" leading="11"/>
+    <paraStyle name="P18" fontName="Helvetica-Bold" fontSize="9.0" leading="11"/>
+    <paraStyle name="P19" fontName="Helvetica" fontSize="9.0" leading="11"/>
+    <paraStyle name="P20" fontName="Helvetica" fontSize="9.0" leading="11"/>
+    <paraStyle name="P21" fontName="Helvetica-Bold" fontSize="14.0" leading="17" textColor="#800000" alignment="RIGHT"/>
+    <paraStyle name="P22" fontName="Helvetica-Bold" fontSize="9.0" leading="11"/>
+    <paraStyle name="P23" fontName="Helvetica-Bold" fontSize="9.0" leading="11" textColor="#ffffff"/>
+    <paraStyle name="P24" fontName="Helvetica" fontSize="9.0" leading="11"/>
+    <paraStyle name="P25" fontName="Helvetica-Bold" fontSize="9.0" leading="11"/>
+    <paraStyle name="P26" fontName="Helvetica-Bold" fontSize="9.0" leading="11" backColor="#cccccc"/>
+    <paraStyle name="Standard" fontName="Helvetica"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="Text_20_body" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Helvetica" fontSize="12.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica"/>
+    <paraStyle name="Table_20_Contents" fontName="Helvetica"/>
+    <paraStyle name="Table_20_Heading" fontName="Helvetica" alignment="CENTER"/>
+    <images/>
+  </stylesheet>
+  <story>
+    <para style="Standard">[[ repeatIn(objects,'o') ]]</para>
+
+    <blockTable colWidths="342.0,156.0" style="Table1">
+      <tr>
+        <td>
+          <para style="P16">[[ o.project_id.code ]]
+          </para>
+        </td>
+        <td>
+          <para style="P21">PLAATSINGSBON</para>
+        </td>
+      </tr>
+    </blockTable>
+    
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="95.0,404.0" style="Table2">
+      <tr>
+        <td>
+          <para style="P23">accountmanager</para>
+        </td>
+        <td>
+          <para style="P8">[[ o.account_manager_id.name ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P17">klant</para>
+        </td>
+        <td>
+          <para style="P8">[[ o.customer_id.name ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P17">project</para>
+        </td>
+        <td>
+          <para style="P8">[[ o.project_id.name ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">contactpersoon</para>
+        </td>
+        <td>
+          <para style="P8">[[ o.contact_id.name ]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <para style="P5">telefoon / gsm
+          </para>
+        </td>
+        <td>
+          <para style="P8">[[ o.contact_id.phone ]] [[ o.contact_id.mobile ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">e-mail
+          </para>
+        </td>
+        <td>
+          <para style="P8">[[ o.contact_id.email ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">ontwerptekening
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.designdrawing ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">simulatietekening
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.simulationdrawing ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">plannen van klant
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.customerplan ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <para style="P8">Plaatsing-/Leveringadres
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">straat
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.delivery_id.street ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <para style="P5">postnr-gemeente / Land
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.delivery_id.zip ]] [[ o.delivery_id.city ]] [[ o.delivery_id.country_id.name ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+      <tr>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P8">Werfvoorbereiding
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">maatname
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.particular_size ]] [[ o.production_order_id.project_id.particular_size_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">bekabeling
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.cabling_requirements_1 ]] [[ o.production_order_id.project_id.cabling_requirements_1_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">Betonanker nodig ? 
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.surface_2 ]] [[ o.production_order_id.project_id.surface_2_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P8">Infolocatie
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">bouwvergunning
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.planning_permission ]] [[ o.production_order_id.project_id.planning_permission_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">plaatsingshoogte
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.platform_height ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <para style="P5">Site toegankelijk ? 
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.parking_2 ]] [[ o.production_order_id.project_id.parking_2_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">Vergunning nodig ?
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.parking_1 ]] [[ o.production_order_id.project_id.parking_1_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P8">Ondergrond
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <para style="P5">Welke gevel ? 
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.surface_4 ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">kleur gevel
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.surface_5 ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">Vaste ondergrond ? 
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.surface_1 ]] [[ o.production_order_id.project_id.surface_1_text ]]
+
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P8">Bestaande reclames
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">af te nemen
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.existing_commercials_2 ]] [[ o.production_order_id.project_id.existing_commercials_2_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">Te stockeren
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.existing_commercials_3 ]] [[ o.production_order_id.project_id.existing_commercials_3_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P8">Elektriciteit
+          </para>
+        </td>
+        <td>
+          <para style="P5">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">voeding
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.cabling_requirements_4 ]] [[ o.production_order_id.project_id.cabling_requirements_4_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">plaats transfo
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.cabling_requirements_3 ]] [[ o.production_order_id.project_id.cabling_requirements_3_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P5">onzichtbaar?
+          </para>
+        </td>
+        <td>
+          <para style="P5">[[ o.production_order_id.project_id.cabling_requirements_2 ]] [[ o.production_order_id.project_id.cabling_requirements_2_text ]]
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <para style="P8">Belangrijke informatie 
+          </para>
+        </td>
+        <td>
+          <para style="P8">die niet op de offerte of het ontwerp is vermeld
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P5">[[ o.note ]] </para>
+
+</story>
+<story>
+
+    <blockTable colWidths="95.0,150.0,113.0,141.0" style="Table_Header">
+      <tr>
+        <td>
+          <para style="P15">Onderwerp</para>
+        </td>
+        <td>
+          <para style="P14">Beschrijving</para>
+        </td>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+
+    <section>
+    <para style="P14">[[repeatIn(o.production_order_id.item_ids,'item')]]</para>
+    <blockTable colWidths="95.0,404.0" style="Table_Items">
+        <tr>
+        <td>
+          <para style="P8">[[ item.name ]]
+          </para>
+        </td>
+        <td>
+          <para style="P8">[[ item.description ]]
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    </section>
+
+
+    <blockTable colWidths="95.0,150.0,113.0,141.0" style="Table_Header">
+      <tr>
+        <td>
+          <para style="P15">Paklijst</para>
+        </td>
+        <td>
+          <para style="P14">Quality Controlled</para>
+        </td>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P14">Geladen
+          </para>
+        </td>
+      </tr>
+  </blockTable>
+
+  <section>
+  <para style="P14">[[repeatIn(o.production_order_id.packing_ids,'packing')]]</para>
+  <blockTable colWidths="95.0,150.0,113.0,141.0" style="Table_Orders">
+      <tr>
+        <td>
+          <para style="P8">[[ packing.name ]]
+          </para>
+        </td>
+        <td>
+          <para style="P8">[[ packing.quality_checked ]]
+          </para>
+        </td>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    </section>
+
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+
+  </story>
+</document>
+

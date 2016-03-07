@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim:fdl=1:
+-->
+<templates id="template" xml:space="preserve">
+    <t t-name="Project-Screen">
+        <div>
+            <div class="datetime_header">
+                <table>
+                    <td style="width:40%;"><img  style="height: 32px;margin-top: -4px;" src="/project_planning_tool/static/img/actions_go_next.png" class="back_img" date=""/></td>
+                    <td>
+                        <b>From : </b><span class="oe_form_field oe_datepicker_root oe_form_field_datetime datetimepicker_date_start"/> 
+                        <b>To</b> <span class="oe_form_field oe_datepicker_root oe_form_field_datetime datetimepicker_date_to"/>
+                        <button class="oe_highlight" id="search_button">Search</button>
+                        </td>
+                    <td><img style="height: 32px;margin-top: -4px;" src="/project_planning_tool/static/img/back_next_refresh_forward_left_arrow.png" class="forward_img" date=""/></td>
+                </table>
+            </div>
+        </div> 
+        <div class="project_data">
+        </div>
+    </t>
+    <t t-name="Project-User">
+        <table style="width:100%;" class="project_table">
+            <!--<tr style="width:100%;"> 
+                <td class="user_header" style="width:20%;"></td>
+                <t t-foreach="users" t-as="user">
+                    <td t-att-id="user[0]" class="user_header" style="width:30%"><b><t t-esc="user[1]"/></b><span class="oe_e oe_fold">í</span></td>
+                </t>
+            </tr>
+            <tr></tr>-->
+        </table>
+        <div class="week_data_div"><table class="week_project_table" style="width:100%;"></table></div>
+    </t>
+    <t t-name="week-data">
+        <tr style="width:100%;"> 
+            <td class="user_header" style="width:10%;"></td>
+            <t t-foreach="users" t-as="user">
+                <td t-att-id="user[0]" class="user_header" style="width:30%"><b style="margin-left: 30px;"><t t-esc="user[1]"/></b><span class="oe_e oe_fold">í</span></td>
+            </t>
+        </tr>
+        <t t-foreach="week_datas" t-as="week">
+            <tr style="width:100%;"> 
+                <td style="width:10%;"><div class="week_header"><b><t t-esc="week[0]"/></b></div></td>
+                <t t-foreach="users" t-as="user">
+                    <td style="width:30%"></td>
+                </t>
+            </tr>
+            <t t-foreach="week[1]" t-as="day">
+                <tr style="min-height:30px;border-bottom: 1px solid lightgray;border-top: 1px solid lightgray;" class="week_project_table">   
+                    <td style="width:10%;" class="day_label_td">
+                        <div class="day_label">
+                            <t t-esc="day[0]"/>
+                        </div>
+                    </td>
+                    <t t-foreach="day[1]" t-as="data"> 
+                        <div class="oe_kanban_column_cards">
+                            <td class="oe_kanban_column_view" style="border-right:1px solid lightgray;">
+                                <t t-foreach="data[1]" t-as="rec">
+                                    <div class="oe_fold_column oe_kanban_record" style="width:330px;margin-left:10%;word-break:break-word">
+                                        <div t-att-data-id="rec.id" t-att-data-project_id="rec.project_id" t-att-data="rec.id" t-attf-class="oe_kanban_color_#{rec.color} oe_project_task_record oe_kanban_draghandle oe_kanban_card oe_kanban_global_click oe_kanban_draghandle">
+                                            <b><t t-esc="rec.name"/></b>
+                                            <t t-attf-class="oe_kanban_color_#{rec.color}" t-if="rec.project_id">
+                                                <br/><t t-esc="rec.project_id[1]"/>
+                                            </t>
+                                            <t t-if="rec.description">
+                                                <br/><b><t t-esc="rec.description"/></b>
+                                            </t>
+                                            <div>
+                                                <t t-if="rec.date_deadline">
+                                                    <font style="color:red;"><b><t t-esc="rec.date_deadline"/></b></font>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </td>
+                        </div>
+                    </t>
+                </tr>
+            </t>
+        </t>
+    </t>
+
+    <t t-name="KanbanColorPickerExtended">
+        <t t-if="widget.number_of_color_schemes">
+        <li t-foreach="widget.number_of_color_schemes" t-as="color">
+            <a href="#" t-att-data-color="color_index" t-attf-class="oe_kanban_color_#{color}"/>
+        </li>
+        </t>
+    </t>
+</templates>

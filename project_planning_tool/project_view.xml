@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.actions.client" id="action_project_planning_tool">
+            <field name="name">Project Planning Tool</field>
+            <field name="tag">project.planning.ui</field>
+        </record>
+    <menuitem id="project_planning" string="Project Planning Tool" action="action_project_planning_tool"/>
+    </data>
+</openerp>

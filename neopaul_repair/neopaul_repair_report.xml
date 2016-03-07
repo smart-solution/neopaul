@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report auto="False" 
+                id="report_neopaul_repair_order" 
+                model="project.issue" 
+                name="neopaul.repair.order"
+                rml="neopaul_repair/report/repair.rml" 
+                string="Repair Order"
+                header="False"/>
+
+    </data>
+</openerp>
+

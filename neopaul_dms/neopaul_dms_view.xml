@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!--
+  <record model="ir.ui.view" id="view_neopaul_issue_project_create">
+        <field name="name">view.neopaul.issue.project.create</field>
+        <field name="model">neopaul.issue.project.create</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="New Project">
+                <separator string="Project" colspan="4"/>
+                <field name="name" colspan="4"/>
+                <field name="partner_id" colspan="4" readonly="1"/>
+                <field name="delivery_address_id" on_change="onchange_address(delivery_address_id, name)" colspan="4"/>
+                <button name="project_generate" string="Create Project" type="object" colspan="4"/>
+            </form>
+        </field>
+    </record>
+
+     <act_window id="neopaul_issue_project_create"
+            name="Create Project"
+            res_model="neopaul.issue.project.create" src_model="project.issue"
+            view_id="view_neopaul_issue_project_create"
+            view_mode="form" target="new" view_type="form"
+            context="{'active_id': active_id}"
+            />
+     --> 
+
+    </data>
+</openerp>

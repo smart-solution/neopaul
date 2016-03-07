@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report auto="False" 
+                id="report_neopaul_project_calculation_voucher" 
+                model="neopaul.project.calculation.voucher" 
+                name="neopaul.project.calculation.voucher"
+                rml="neopaul_project/report/calculation_voucher.rml" 
+                string="Calculation Voucher"
+                header="False"/>
+
+        <report auto="False" 
+                id="report_neopaul_project_design_voucher" 
+                model="neopaul.project.design.voucher" 
+                name="neopaul.project.design.voucher"
+                rml="neopaul_project/report/design_voucher.rml" 
+                string="Design Voucher"
+                header="False"/>
+
+        <report auto="False" 
+                id="report_neopaul_project_project" 
+                model="project.project" 
+                name="neopaul.project.project"
+                rml="neopaul_project/report/neopaul_project.rml" 
+                string="Project"
+                header="False"/>
+
+        <report auto="False" 
+                id="report_neopaul_project_sale_order_email" 
+                model="sale.order" 
+                name="neopaul.project.so.email"
+                rml="neopaul_project/report/sale_order_email.rml" 
+                string="Quote / Order (Email)"
+                header="True"/>
+
+        <report auto="False" 
+                id="report_neopaul_project_sale_order_email_nototal" 
+                model="sale.order" 
+                name="neopaul.project.so.email.nototal"
+                rml="neopaul_project/report/sale_order_email_nototal.rml" 
+                string="Quote / Order (Email) No Total"
+                header="True"/>
+
+        <report auto="False" 
+                id="report_neopaul_project_sale_order_paper" 
+                model="sale.order" 
+                name="neopaul.project.so.paper"
+                rml="neopaul_project/report/sale_order_paper.rml" 
+                string="Quote / Order (Paper)"
+                header="False"/>
+
+        <report auto="False" 
+                id="report_neopaul_project_sale_order_paper_nototal" 
+                model="sale.order" 
+                name="neopaul.project.so.paper.nototal"
+                rml="neopaul_project/report/sale_order_paper_nototal.rml" 
+                string="Quote / Order (Paper) No Total"
+                header="False"/>
+            
+        <report auto="False" 
+                id="report_neopaul_production_order" 
+                model="neopaul.production.order" 
+                name="neopaul.production.order"
+                rml="neopaul_project/report/production_order.rml" 
+                string="Production Order"
+                header="False"/>
+
+        <report auto="False" 
+                id="report_neopaul_placement_voucher" 
+                model="neopaul.placement.voucher" 
+                name="neopaul.placement.voucher"
+                rml="neopaul_project/report/placement_voucher.rml" 
+                string="Placement Voucher"
+                header="False"/>
+
+    </data>
+</openerp>
+
