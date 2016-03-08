@@ -59,8 +59,9 @@ class account_proacc_api(osv.osv_memory):
                 vat = ""
                 company_nbr = ""
                 if customer.vat:
-                    vat = customer.vat[0:2] + ' ' + customer.vat[3:]
+                    vat = customer.vat[0:2] + ' ' + customer.vat[2:]
 		    if customer.vat[0:2] == 'BE':
+                        vat = customer.vat[0:2] + ' ' + customer.vat[3:]
                     	company_nbr = customer.vat[3:]
 			company_nbr = company_nbr.zfill(10)
                 if customer.lang:
