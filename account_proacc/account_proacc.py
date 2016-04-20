@@ -25,7 +25,6 @@ import time
 import csv
 import base64
 
-
 class account_proacc_api(osv.osv_memory):
 
     _name = "account.proacc.api"
@@ -133,10 +132,14 @@ class account_proacc_api(osv.osv_memory):
 
         with open(filename, 'rU') as csvfile:
             file_data = csvfile.read()
+    
+        udata = file_data.decode("utf-8") 
+        ansi_data = udata.encode("latin-1")
 
         model_data_ids =  self.pool.get('ir.model.data').search(cr, uid,[('model','=','ir.ui.view'),('name','=','view_proacc_file_save')], context=context)
         resource_id =  self.pool.get('ir.model.data').read(cr, uid, model_data_ids, fields=['res_id'], context=context)[0]['res_id']
-        filedata = base64.encodestring(file_data)
+        #filedata = base64.encodestring(file_data)
+        filedata = base64.encodestring(ansi_data)
 
         self.write(cr, uid, ids[0], {'file':filedata, 'file_name':filename[5:]})
 
