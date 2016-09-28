@@ -28,6 +28,7 @@
                 <field name="partner_id"/>
                 <field name="name" string="Project Name"/>
                 <field name="code"/>
+                <field name="company_id"/>
                 <field name="user_id"/>
                 <field name="date" string="Placement Date"/>
                 <field name="neopaul_stage"/>

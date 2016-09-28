@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+
+<t t-extend="mail.compose_message">
+    <t t-jquery="a.oe_compose_log" t-operation="before">
+        <a class="oe_compose_internal">Send an internal message</a>
+        <span class="oe_grey oe_sep_word">or</span>
+    </t>
+</t>
+
+<t t-extend="mail.thread.list_recipients">
+    <t t-jquery="div.oe_recipients" t-operation="replace">
+        <div class="oe_recipients" t-if="!widget.is_log &amp;&amp; !widget.is_internal">
+            <t t-foreach='widget.recipients' t-as='recipient'>
+                <label t-attf-title="Add as recipient and follower (reason: #{recipient.reason})">
+                    <input type="checkbox" t-att-checked="recipient.checked ? 'checked' : undefined" t-att-data="recipient.email_address"/>
+                    <t t-raw="recipient.name"/> 
+                    <t t-if="recipient.email_address">(<t t-raw="recipient.email_address"/>)</t>
+                    <t t-if="!recipient.email_address">(no email address)</t>
+                </label>
+            </t>
+        </div>
+    </t>
+    <t t-jquery="div.oe_recipients" t-operation="after">
+        <div t-if="widget.is_internal">
+            <span>Send a message only to the followers that are employees</span>
+        </div>
+    </t>
+</t>
+
+</template>

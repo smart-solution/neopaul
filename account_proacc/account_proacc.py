@@ -168,7 +168,8 @@ class account_proacc_api(osv.osv_memory):
 
     def invoice_export(self, cr, uid, ids, context=None):
         obj = self.pool.get('account.invoice')
-        invoice_ids = obj.search(cr, uid, ['|',('type','=','out_invoice'),('type','=','out_refund'),('state','=','open'),('proacc_exported','=',False)])
+	company_id = self.pool.get('res.users').browse(cr, uid, uid).company_id.id
+        invoice_ids = obj.search(cr, uid, ['|',('type','=','out_invoice'),('type','=','out_refund'),('state','=','open'),('proacc_exported','=',False),('company_id','=',company_id)])
         if not invoice_ids:
             return False
 

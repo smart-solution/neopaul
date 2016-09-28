@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+<!--
+   <menuitem
+       icon="terp-project" id="sale_tender_main_menu"
+       name="sale_tender" sequence="0"
+       web_icon="images/sale_tender.png"
+       web_icon_hover="images/sale_tender-hover.png"/>
+
+    <menuitem name="Configuration" id="sale_tender_configuration_menu" parent="module_main_menu"/>
+    <menuitem name="sale_tender" id="module_menu" parent="module_main_menu"  sequence="5"/>
+
+-->
+   <!--
+       sale_tender Views 
+   -->
+
+    <record model="ir.ui.view" id="view_sale_tender_order">
+        <field name="name">view.sale_tender_order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="tender_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_sale_tender_tree">
+        <field name="name">view.sale_tender.tree</field>
+        <field name="model">sale.tender</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Sale Tenders">
+                <field name="name"/>
+                <field name="order_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_sale_tender_form">
+        <field name="name">view.sale_tender.form</field>
+        <field name="model">sale.tender</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Sale Tender">
+        		<field name="name"/>
+                <separator string="Sale Orders" colspan="4"/>
+		        <field name="order_ids" colspan="4" nolabel="1"/>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_sale_tender">
+        <field name="name">All sale_tender</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.tender</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_sale_tender_tree"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_sale_tender_tree_view">
+        <field name="sequence">10</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_sale_tender_tree"/>
+        <field name="act_window_id" ref="action_sale_tender"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_sale_tender_form_view">
+        <field name="sequence">20</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_sale_tender_form"/>
+        <field name="act_window_id" ref="action_sale_tender"/>
+    </record>
+
+    <menuitem name="Sale Tenders" id="menu_sale_tender" parent="base.menu_sales" action="action_sale_tender" sequence="5"/>
+
+<!--
+
+    <record model="ir.ui.view" id="view_campaign_proposition_segment_segmentation_form_inherit">
+        <field name="name">view.campaign.proposition.segment.segmentation.form</field>
+        <field name="model">dm.campaign.proposition</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="dm.view_campaign_proposition_form"/>        
+        <field name="arch" type="xml">
+            <xpath expr="/form/notebook/page/field[@name='segment_ids']/form/notebook" position="inside">
+                <page string="Extraction">
+                    <field name="segmentation_id" string="Segmentation"/>
+                    <field name="use_census"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+        <record id="view_product_search_nineit" model="ir.ui.view">
+            <field name="name">product.product.search.nineit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view" />
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <xpath expr="/search/field[@name='categ_id']" position='after'>
+                        <field name="nineit_sku"/>
+                        <field name="nineit_barcode"/>
+                        <field name="nineit_import_file_id" string="Supplier"/>
+                </xpath>
+            </field>
+        </record>
+
+    <act_window name="Ship Sale Orders"
+    res_model="sale.order"
+    src_model="res.partner"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_tresco_ship_sale_orders"
+    context="{'ship_id':active_id}"
+    domain="[('ship_id','=',active_id)]"
+    />
+
+
+-->
+
+    </data>
+</openerp>

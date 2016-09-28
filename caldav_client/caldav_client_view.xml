@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+   <!--
+       caldav_client Views 
+   -->
+
+    <record model="ir.ui.view" id="view_caldav_client_user_form">
+        <field name="name">view.caldav_client.user.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="CalDAV">
+                    <field name="caldav_usr" string="User" attrs="{'readonly':[('caldav_state','=','validated')]}"/>
+                    <field name="caldav_pwd" string="Password" password="True" attrs="{'readonly':[('caldav_state','=','validated')]}"/>
+                    <!--<field name="caldav_url"/>-->
+                    <field name="caldav_server_url" colspan="4" attrs="{'readonly':[('caldav_state','=','validated')]}" />
+                    <field name="caldav_ssl" attrs="{'readonly':[('caldav_state','=','validated')]}"/>
+                    <field name="caldav_ignore_past" attrs="{'readonly':[('caldav_state','=','validated')]}"/>
+                    <!--                    <field name="caldav_calendar_ids" colspan="4" nolabel="1"/>-->
+                    <field name="caldav_log" colspan="4" nolabel="1"/>
+                    <button colspan="4" string="Sync CalDAV" name="caldav_client_sync" type="object" attrs="{'invisible':[('caldav_state','=','disabled')]}"/>
+                    <group colspan="4">
+                        <field name="caldav_state"/>
+                        <button string="Validate Connection" name="caldav_client_validate" type="object" attrs="{'invisible':[('caldav_state','=','validated')]}"/>
+                        <button string="Disable Connection" name="caldav_client_disable" type="object" attrs="{'invisible':[('caldav_state','=','disabled')]}"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+    
+    <record model="ir.ui.view" id="view_caldav_client_calendar_tree">
+        <field name="name">view.caldav_client.calendar.tree</field>
+        <field name="model">caldav.calendar</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="CalDAV Calendars" editable="bottom">
+                <field name="name"/>
+                <field name="selected"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_caldav_client_calendar_form">
+        <field name="name">view.caldav_client.calendar.form</field>
+        <field name="model">caldav.calendar</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="CalDAV Calendar">
+		        <field name="name" colspan="4"/>
+		        <field name="selected"/>
+		        <field name="user_id"/>
+            </form>
+        </field>
+    </record>
+  
+    <!--
+    <record model="ir.ui.view" id="view_caldav_client_server_tree">
+        <field name="name">view.caldav_client.server.tree</field>
+        <field name="model">caldav.client.server</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="caldav Client">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_caldav_client_server_form">
+        <field name="name">view.caldav_client.server.form</field>
+        <field name="model">caldav.client.server</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="CalDav Server Configuration">
+		        <field name="name" colspan="4"/>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_caldav_client_server">
+        <field name="name">CalDav Server Configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">caldav.client.server</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_caldav_client_server_form"/>
+    </record>
+
+    <menuitem name="CalDav Client" id="menu_caldav_client_server" parent="base.menu_config" sequence="5"/>
+    <menuitem name="CalDav Server Configuration" id="menu_caldav_client_server_config" parent="menu_caldav_client_server" action="action_caldav_client_server" sequence="5"/>
+
+    -->
+    <!--
+    <record model="ir.ui.view" id="view_campaign_proposition_segment_segmentation_form_inherit">
+        <field name="name">view.campaign.proposition.segment.segmentation.form</field>
+        <field name="model">dm.campaign.proposition</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="dm.view_campaign_proposition_form"/>        
+        <field name="arch" type="xml">
+            <xpath expr="/form/notebook/page/field[@name='segment_ids']/form/notebook" position="inside">
+                <page string="Extraction">
+                    <field name="segmentation_id" string="Segmentation"/>
+                    <field name="use_census"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+        <record id="view_product_search_nineit" model="ir.ui.view">
+            <field name="name">product.product.search.nineit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view" />
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <xpath expr="/search/field[@name='categ_id']" position='after'>
+                        <field name="nineit_sku"/>
+                        <field name="nineit_barcode"/>
+                        <field name="nineit_import_file_id" string="Supplier"/>
+                </xpath>
+            </field>
+        </record>
+
+    <act_window name="Ship Sale Orders"
+    res_model="sale.order"
+    src_model="res.partner"
+    view_type="form"
+    view_mode="tree,form"
+    id="act_tresco_ship_sale_orders"
+    context="{'ship_id':active_id}"
+    domain="[('ship_id','=',active_id)]"
+    />
+
+
+-->
+
+    </data>
+</openerp>
